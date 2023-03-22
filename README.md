@@ -18,11 +18,10 @@ FILL IN TEXT HERE
 
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
-| Desmond Chua | A1234567A | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567A@nus.edu.sg |
-| Chang Ye Han | A1234567B | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567B@gmail.com |
-| Chee Jia Wei | A1234567C | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567C@outlook.com |
-| Ganesh Kumar | A1234567D | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567D@yahoo.com |
-| Jeanette Lim | A1234567E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567E@qq.com |
+| Borromeo, Angelie Quiapo | A0270177A | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| angelieqborromeo@gmail.com |
+| Chua Jack Yune | A0269363U | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| jckynchua@yahoo.com |
+| Nilothpal Bhattacharya | E1113631 | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e1113631@u.nus.edu |
+| Kwatt Ivy | E1113633 | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| kwattivy@gmail.com|
 
 ---
 
