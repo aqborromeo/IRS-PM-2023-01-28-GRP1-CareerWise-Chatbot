@@ -1,7 +1,7 @@
-﻿### [ Practice Module ] IRS-PM-2023-01-28-GRP1-myUpskillbot-Career-Services-Chatbot
+﻿### [ Practice Module ] IRS-PM-2023-01-28-GRP1-myUpskill-Chatbot
 
 ## SECTION 1 : PROJECT TITLE
-## myUpSkillbot - Career Services Planner
+## myUpSkillbot - Career Planner
 
 <img src="SystemCode/clips/static/hdb-bto.png"
      style="float: left; margin-right: 0px;" />
@@ -23,10 +23,12 @@ FILL IN TEXT HERE
 | Nilothpal Bhattacharya | E1113631 | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e1113631@u.nus.edu |
 | Kwatt Ivy | E1113633 | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| kwattivy@gmail.com|
 
+
 ---
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
+### THIS IS JUST A SAMPLE 
 [![Sudoku AI Solver](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Sudoku AI Solver")
 
 Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is acceptable. 
