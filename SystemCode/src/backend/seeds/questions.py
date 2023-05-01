@@ -108,7 +108,7 @@ class QuestionSeeder(Seeder):
                 "order": 320,
                 "group": "experience",
                 "code": "experience_open",
-                "text": 'Describe your past work experience. \n(If you''re studying, you can talk about your extra-curricular activities)',
+                "text": 'Describe your past work experience. <br>(If you''re studying, you can talk about your extra-curricular activities)',
                 "min_response_length": 200
             },
 
