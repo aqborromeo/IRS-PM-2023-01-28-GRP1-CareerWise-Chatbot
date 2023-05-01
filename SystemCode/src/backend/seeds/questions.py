@@ -43,7 +43,7 @@ class QuestionSeeder(Seeder):
                 "order": 60,
                 "group": "context",
                 "code": "context_duration_of_typical_work_week",
-                "text": 'How many <b>hours</b> do you expect to <b>work in a day</b>?'
+                "text": 'How many <b>hours</b> do you expect to <b>work in a week</b>?'
             }, "context_outdoors_exposed_to_weather": {
                 "order": 70,
                 "group": "context",
@@ -101,14 +101,14 @@ class QuestionSeeder(Seeder):
                 "order": 310,
                 "group": "interest",
                 "code": "interest_open",
-                "text": 'Describe what you would like to do for a living.',
+                "text": 'Describe in detail what you would like to do for a living.',
                 "min_response_length": 200
             },
             "open_experience": {
                 "order": 320,
                 "group": "experience",
                 "code": "experience_open",
-                "text": 'Describe your past work experience. (If you''re studying, you can talk about your extra-curricular activities)',
+                "text": 'Describe your past work experience. \n(If you''re studying, you can talk about your extra-curricular activities)',
                 "min_response_length": 200
             },
 
