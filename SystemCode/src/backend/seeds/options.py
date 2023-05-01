@@ -1,7 +1,7 @@
 from flask_seeder import Seeder
 from app.models.question import Question
 from app.models.option import Option
-
+from app.utils.common import is_same_db_data
 
 level_options = {
     "1": {
@@ -186,8 +186,9 @@ class OptionSeeder(Seeder):
 
             for option in self.db.session.query(Option).filter(Option.question_id == question.id, Option.value.in_(current_new_options.keys())).all():
                 # Only merge options which already exist in the database
-                new_option = current_new_options.pop(option.value)
-                self.db.session.merge(Option(**new_option))
+                update_option = current_new_options.pop(option.value)
+                if not is_same_db_data(option, update_option):
+                    self.db.session.merge(Option(**update_option))
 
             # Only add those options which did not exist in the database
             def map_items(key):
@@ -195,8 +196,10 @@ class OptionSeeder(Seeder):
                 item["question_id"] = question.id
                 return Option(**item)
 
-            insert_options = list(
-                map(map_items, current_new_options.keys()))
-            self.db.session.add_all(insert_options)
-            print("Add %s options" % str(len(insert_options)))
+            current_new_options_keys = current_new_options.keys()
+            if current_new_options_keys:
+                insert_options = list(
+                    map(map_items, current_new_options_keys))
+                self.db.session.add_all(insert_options)
+                print("Add %s options" % str(len(insert_options)))
             self.db.session.commit()

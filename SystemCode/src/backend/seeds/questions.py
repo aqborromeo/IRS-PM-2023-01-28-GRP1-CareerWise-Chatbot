@@ -1,5 +1,6 @@
 from flask_seeder import Seeder, generator
 from app.models.question import Question
+from app.utils.common import is_same_db_data
 
 
 class QuestionSeeder(Seeder):
@@ -123,16 +124,20 @@ class QuestionSeeder(Seeder):
 
         for each in Question.query.filter(Question.code.in_(new_questions.keys())).all():
             # Only merge those posts which already exist in the database
-            new_question = new_questions.pop(each.id)
-            self.db.session.merge(Question(**new_question))
 
-            print("Update question: %s" % new_question['code'])
+            update_question = new_questions.pop(each.code)
+            if not is_same_db_data(each, update_question):
+                self.db.session.merge(Question(**update_question))
+                print("Update question: %s" % update_question['code'])
 
         # Only add those posts which did not exist in the database
-        insert_questions = list(
-            map(lambda item: Question(**item), new_questions.values()))
-        self.db.session.add_all(insert_questions)
-        print("Add %s questions" % str(len(insert_questions)))
+        new_questions_values = new_questions.values()
+
+        if new_questions_values:
+            insert_questions = list(
+                map(lambda item: Question(**item), new_questions_values))
+            self.db.session.add_all(insert_questions)
+            print("Add %s questions" % str(len(new_questions_values)))
 
         # Now we commit our modifications (merges) and inserts (adds) to the database!
         self.db.session.commit()

@@ -4,6 +4,8 @@ import json
 from app.models.occupation import Occupation
 from pathlib import Path
 
+from app.utils.common import is_same_db_data
+
 base_path = Path(__file__).parent
 file_path = (base_path / "./occupations.json").resolve()
 
@@ -22,9 +24,9 @@ class OccupationSeeder(Seeder):
         for each in Occupation.query.filter(Occupation.id.in_(data.keys())).all():
             # Only merge those posts which already exist in the database
             update_item = data.pop(each.id)
-            self.db.session.merge(Occupation(**update_item, id=each.id))
-
-            print("Update occupation: %s" % each.id)
+            if not is_same_db_data(each, update_item):
+                self.db.session.merge(Occupation(**update_item, id=each.id))
+                print("Update occupation: %s" % each.id)
 
         # Only add those posts which did not exist in the database
         if data.keys():

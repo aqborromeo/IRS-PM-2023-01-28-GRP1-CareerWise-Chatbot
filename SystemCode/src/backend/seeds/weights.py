@@ -2,6 +2,7 @@ from flask_seeder import Seeder
 
 from app.models.question import Question
 from app.models.weight import Weight
+from app.utils.common import is_same_db_data
 
 
 class WeightSeeder(Seeder):
@@ -108,8 +109,9 @@ class WeightSeeder(Seeder):
 
             for weight in self.db.session.query(Weight).filter(Weight.question_id == question.id, Weight.variable.in_(current_new_weights.keys())).all():
                 # Only merge options which already exist in the database
-                new_weight = current_new_weights.pop(weight.variable)
-                self.db.session.merge(Weight(**new_weight))
+                update_weight = current_new_weights.pop(weight.variable)
+                if not is_same_db_data(weight, update_weight):
+                    self.db.session.merge(Weight(**update_weight))
 
             # Only add those options which did not exist in the database
             def map_items(key):
@@ -118,7 +120,10 @@ class WeightSeeder(Seeder):
                 item["question_id"] = question.id
                 return Weight(**item)
 
-            insert_weights = list(map(map_items, current_new_weights.keys()))
-            self.db.session.add_all(insert_weights)
-            print("Add %s weights" % str(len(insert_weights)))
+            current_new_weights_keys = current_new_weights.keys()
+            if current_new_weights_keys:
+                insert_weights = list(
+                    map(map_items, current_new_weights_keys))
+                self.db.session.add_all(insert_weights)
+                print("Add %s weights" % str(len(insert_weights)))
             self.db.session.commit()

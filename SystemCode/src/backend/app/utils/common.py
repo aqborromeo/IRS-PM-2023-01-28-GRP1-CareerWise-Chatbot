@@ -8,6 +8,15 @@ def convert_snake_to_camel(string: str):
     return res
 
 
+def is_same_db_data(row, update_data):
+    is_same = True
+    for column in update_data.keys():
+        if update_data[column] != getattr(row, column):
+            is_same = False
+            break
+    return is_same
+
+
 def row2dict(row, snake_to_camel=False):
     d = {}
     for column in row.__table__.columns:
