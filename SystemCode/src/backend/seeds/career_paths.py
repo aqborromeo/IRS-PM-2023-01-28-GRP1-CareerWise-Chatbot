@@ -35,6 +35,7 @@ class CareerPathSeeder(Seeder):
                 map(lambda item: CareerPath(**item), data.values()))
             self.db.session.add_all(insert_items)
             print("Add %s career paths" % str(len(insert_items)))
+            self.db.session.commit()
 
             # Purge non-existent items
             delete_statement = delete(CareerPath).where(

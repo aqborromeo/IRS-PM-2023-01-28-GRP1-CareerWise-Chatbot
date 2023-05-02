@@ -13,7 +13,7 @@ RUN poetry install
 
 # Update database
 RUN alembic upgrade head
-RUN flask seed
+RUN flask seed run
 
 EXPOSE 5000
 
