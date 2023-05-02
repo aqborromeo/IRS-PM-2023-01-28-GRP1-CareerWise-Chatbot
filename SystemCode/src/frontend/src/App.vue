@@ -10,6 +10,7 @@ import "ant-design-vue/es/button/style/css";
 import "ant-design-vue/es/input/style/css";
 import "ant-design-vue/es/card/style/css";
 import "ant-design-vue/es/collapse/style/css";
+import "ant-design-vue/es/table/style/css";
 
 import { onMounted } from "vue";
 

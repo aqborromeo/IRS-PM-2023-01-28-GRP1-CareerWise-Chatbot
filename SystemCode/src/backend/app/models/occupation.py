@@ -32,6 +32,8 @@ class Occupation(db.Model):
     context_deal_with_unpleasant_or_angry_people = db.Column(db.Float)
     context_exposed_to_hazardous_conditions = db.Column(db.Float)
 
+    ssoc_jobs = relationship("SsocJob", back_populates="occupation")
+
     created_at = db.Column(db.DateTime(timezone=True),
                            server_default=func.now())
     updated_at = db.Column(db.DateTime(timezone=True),

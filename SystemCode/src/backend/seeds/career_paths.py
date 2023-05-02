@@ -6,7 +6,7 @@ from app.utils.common import is_same_db_data
 from pathlib import Path
 
 base_path = Path(__file__).parent
-file_path = (base_path / "./career_paths.json").resolve()
+file_path = (base_path / "./data/career_paths.json").resolve()
 
 
 class CareerPathSeeder(Seeder):

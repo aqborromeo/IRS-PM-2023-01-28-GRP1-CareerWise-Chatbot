@@ -4,6 +4,7 @@ from sqlalchemy import or_
 
 from app.models.occupation import Occupation
 from app.models.career_path import CareerPath
+from app.models.ssoc_job import SsocJob
 from app.models.chat import Chat, CreatedBy
 from app.models.user import User
 
@@ -37,13 +38,18 @@ class OccupationApi(Resource):
     def get(token_data, self, id):
         occupation = db.session.query(Occupation).filter_by(
             id=id).first()
-        career_paths = db.session.query(CareerPath).filter(
-            or_(CareerPath.source_id == id, CareerPath.target_id == id)).all()
-
         occupation_dict = map_row(occupation)
 
+        # Career paths
+        career_paths = db.session.query(CareerPath).filter(
+            or_(CareerPath.source_id == id, CareerPath.target_id == id)).all()
         career_paths_dict = list(map(map_career_path, career_paths))
-
         occupation_dict["careerPaths"] = career_paths_dict
+
+        # SSOC Jobs
+        ssoc_jobs = db.session.query(SsocJob).filter(
+            SsocJob.occupation_id == id).all()
+        ssoc_jobs_dict = list(map(map_row, ssoc_jobs))
+        occupation_dict["ssocJobs"] = ssoc_jobs_dict
 
         return jsonify(occupation_dict)

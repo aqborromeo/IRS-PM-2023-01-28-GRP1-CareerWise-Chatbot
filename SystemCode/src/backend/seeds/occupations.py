@@ -7,7 +7,7 @@ from pathlib import Path
 from app.utils.common import is_same_db_data
 
 base_path = Path(__file__).parent
-file_path = (base_path / "./occupations.json").resolve()
+file_path = (base_path / "./data/occupations.json").resolve()
 
 
 class OccupationSeeder(Seeder):

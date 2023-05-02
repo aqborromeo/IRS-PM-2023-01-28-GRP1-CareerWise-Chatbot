@@ -7,6 +7,7 @@ from .weight import Weight
 from .occupation import Occupation
 from .result import Result
 from .career_path import CareerPath
+from .ssoc_job import SsocJob
 
 
 target_metadata = [
@@ -18,5 +19,6 @@ target_metadata = [
     Weight.metadata,
     Occupation.metadata,
     Result.metadata,
-    CareerPath.metadata
+    CareerPath.metadata,
+    SsocJob.metadata
 ]

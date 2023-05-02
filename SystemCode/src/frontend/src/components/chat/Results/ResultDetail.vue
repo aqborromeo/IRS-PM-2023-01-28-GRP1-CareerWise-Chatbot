@@ -19,10 +19,10 @@
           {{ occupation.description }}
         </div>
 
-        <div class="resultDetail__item-infos">
+        <div class="resultDetail__item-section">
           <Collapse :bordered="false">
             <CollapsePanel key="task" :header="'Work Tasks'">
-              <ul>
+              <ul class="resultDetail__item-ul">
                 <li v-for="task in splitTasks" :key="task">
                   {{ task }}
                 </li>
@@ -31,9 +31,38 @@
           </Collapse>
         </div>
 
-        <h3>Career Paths</h3>
-        <div class="resultDetail__item-infos-diagram">
-          <ArcDiagram :data="careerPathsGraphData" :currentItem="occupation" />
+        <div
+          class="resultDetail__item-section"
+          v-if="occupation && occupation.ssocJobs && occupation.ssocJobs.length"
+        >
+          <Collapse :bordered="false">
+            <CollapsePanel key="task" :header="'Job Titles & Salary'">
+              <Table
+                :dataSource="
+                  occupation.ssocJobs.map((d) => ({ ...d, key: d.id }))
+                "
+                :columns="ssocJobsColumns"
+              ></Table>
+            </CollapsePanel>
+          </Collapse>
+        </div>
+
+        <div
+          class="resultDetail__item-section"
+          v-if="
+            occupation &&
+            occupation.careerPaths &&
+            occupation.careerPaths.length
+          "
+        >
+          <Collapse :bordered="false">
+            <CollapsePanel key="task" :header="'Career Paths'">
+              <ArcDiagram
+                :data="careerPathsGraphData"
+                :currentItem="occupation"
+              />
+            </CollapsePanel>
+          </Collapse>
         </div>
       </div>
     </div>
@@ -43,6 +72,7 @@
 <script setup>
 import { computed, defineProps } from "vue";
 import { CloseOutlined } from "@ant-design/icons-vue";
+import { Collapse, CollapsePanel, Button, Table } from "ant-design-vue";
 import ArcDiagram from "@/components/library/ArcDiagram/ArcDiagram.vue";
 
 import { careerPathsToGraph } from "@/plugins/occupation";
@@ -72,6 +102,29 @@ const splitTasks = computed(() => {
 const careerPathsGraphData = computed(() => {
   return careerPathsToGraph(props.occupation.careerPaths);
 });
+
+const ssocJobsColumns = [
+  {
+    title: "Title",
+    dataIndex: "ssocJobTitle",
+    key: "ssocJobTitle",
+  },
+  {
+    title: "ISCO Code",
+    dataIndex: "iscoCode",
+    key: "iscoCode",
+  },
+  {
+    title: "Min. Salary",
+    dataIndex: "minSalary",
+    key: "minSalary",
+  },
+  {
+    title: "Max. Salary",
+    dataIndex: "maxSalary",
+    key: "maxSalary",
+  },
+];
 </script>
 
 <style scoped>
@@ -146,6 +199,16 @@ const careerPathsGraphData = computed(() => {
 .resultDetail__item-infos {
   text-align: left;
   width: 100%;
+  padding: 2rem 0;
+}
+
+.resultDetail__item-ul {
+  text-align: left;
+}
+
+.resultDetail__item-infos-section {
+  width: 100%;
+  text-align: left;
   padding: 2rem 0;
 }
 
