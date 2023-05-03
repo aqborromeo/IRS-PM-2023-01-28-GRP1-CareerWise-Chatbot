@@ -36,6 +36,13 @@ def map_results(results):
     return rows2dict(results, snake_to_camel=True, row_callback=result_row_callback)
 
 
+class ResultRatingApi(Resource):
+    @auth.middleware
+    def post(token_data, self, id, rating):
+        result = self.db.session.merge(Result(id=id, user_rating=rating))
+        return map_result(result)
+
+
 class ResultApi(Resource):
     @auth.middleware
     def get(token_data, self, chat_session_id, id):
