@@ -126,6 +126,8 @@ class QuestionSeeder(Seeder):
             # Only merge those posts which already exist in the database
 
             update_question = new_questions.pop(each.code)
+            update_question['id'] = each.id
+
             if not is_same_db_data(each, update_question):
                 self.db.session.merge(Question(**update_question))
                 print("Update question: %s" % update_question['code'])
