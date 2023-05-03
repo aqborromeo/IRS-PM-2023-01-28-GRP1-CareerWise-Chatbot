@@ -19,6 +19,8 @@ class Result(db.Model):
     context_similarity = db.Column(db.Float)
     score = db.Column(db.Float)
 
+    user_rating = db.Column(db.Integer)
+
     chat_session_id = db.Column(db.ForeignKey(ChatSession.id))
 
     created_at = db.Column(db.DateTime(timezone=True),

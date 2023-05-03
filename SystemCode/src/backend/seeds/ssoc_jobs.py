@@ -37,6 +37,7 @@ class SsocJobSeeder(Seeder):
                 map(lambda item: self.Model(**item), data.values()))
             self.db.session.add_all(insert_items)
             print(f"Add {str(len(insert_items))} {self.label}")
+            self.db.session.commit()
 
             # Purge non-existent items
             delete_statement = delete(self.Model).where(
