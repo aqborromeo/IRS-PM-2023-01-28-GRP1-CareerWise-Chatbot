@@ -1,20 +1,20 @@
 from flask_seeder import Seeder
 from sqlalchemy import delete
 import json
-from app.models.ssoc_job import SsocJob
+from app.models.program_trend import ProgramTrend
 from app.utils.common import is_same_db_data
 from pathlib import Path
 
 base_path = Path(__file__).parent
-file_path = (base_path / "./data/ssoc_jobs.json").resolve()
+file_path = (base_path / "./data/program_trends.json").resolve()
 
 
-class SsocJobSeeder(Seeder):
+class ProgramTrendSeeder(Seeder):
     def __init__(self, db=None):
         super().__init__(db=db)
-        self.priority = 6
-        self.label = 'SSOC jobs'
-        self.Model = SsocJob
+        self.priority = 7
+        self.label = 'Program Trends'
+        self.Model = ProgramTrend
 
     # run() will be called by Flask-Seeder
     def run(self):
