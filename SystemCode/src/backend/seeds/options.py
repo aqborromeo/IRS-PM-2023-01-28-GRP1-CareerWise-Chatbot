@@ -182,24 +182,27 @@ class OptionSeeder(Seeder):
         }
 
         for question in Question.query.filter(Question.code.in_(new_options.keys())).all():
-            current_new_options = new_options[question.code]
+            current_new_options = new_options[question.code] if question.code in new_options else None
 
-            for option in self.db.session.query(Option).filter(Option.question_id == question.id, Option.value.in_(current_new_options.keys())).all():
-                # Only merge options which already exist in the database
-                update_option = current_new_options.pop(option.value)
-                if not is_same_db_data(option, update_option):
-                    self.db.session.merge(Option(**update_option))
+            if current_new_options:
+                for option in self.db.session.query(Option).filter(Option.question_id == question.id, Option.value.in_(current_new_options.keys())).all():
+                    # Only merge options which already exist in the database
+                    update_option = current_new_options.pop(option.value)
+                    update_option['id'] = option.id
 
-            # Only add those options which did not exist in the database
-            def map_items(key):
-                item = current_new_options[key]
-                item["question_id"] = question.id
-                return Option(**item)
+                    if not is_same_db_data(option, update_option):
+                        self.db.session.merge(Option(**update_option))
 
-            current_new_options_keys = current_new_options.keys()
-            if current_new_options_keys:
-                insert_options = list(
-                    map(map_items, current_new_options_keys))
-                self.db.session.add_all(insert_options)
-                print("Add %s options" % str(len(insert_options)))
+                # Only add those options which did not exist in the database
+                def map_items(key):
+                    item = current_new_options[key]
+                    item["question_id"] = question.id
+                    return Option(**item)
+
+                current_new_options_keys = current_new_options.keys()
+                if current_new_options_keys:
+                    insert_options = list(
+                        map(map_items, current_new_options_keys))
+                    self.db.session.add_all(insert_options)
+                    print("Add %s options" % str(len(insert_options)))
             self.db.session.commit()

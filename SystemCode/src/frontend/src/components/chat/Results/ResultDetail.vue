@@ -37,12 +37,7 @@
         >
           <Collapse :bordered="false">
             <CollapsePanel key="task" :header="'Job Titles & Salary'">
-              <Table
-                :dataSource="
-                  occupation.ssocJobs.map((d) => ({ ...d, key: d.id }))
-                "
-                :columns="ssocJobsColumns"
-              ></Table>
+              <Table :dataSource="ssocJobs" :columns="ssocJobsColumns"></Table>
             </CollapsePanel>
           </Collapse>
         </div>
@@ -101,6 +96,19 @@ const splitTasks = computed(() => {
 
 const careerPathsGraphData = computed(() => {
   return careerPathsToGraph(props.occupation.careerPaths);
+});
+
+const displaySalary = (salary) => {
+  return salary ? `SGD ${salary.toLocaleString()}` : "-";
+};
+
+const ssocJobs = computed(() => {
+  return props.occupation.ssocJobs.map((d) => ({
+    ...d,
+    minSalary: displaySalary(d.minSalary),
+    maxSalary: displaySalary(d.minSalary),
+    key: d.id,
+  }));
 });
 
 const ssocJobsColumns = [

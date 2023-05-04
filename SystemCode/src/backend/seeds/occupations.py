@@ -8,6 +8,7 @@ from app.utils.common import is_same_db_data
 
 base_path = Path(__file__).parent
 file_path = (base_path / "./data/occupations.json").resolve()
+salaries_file_path = (base_path / "./data/onet_salaries.json").resolve()
 
 
 class OccupationSeeder(Seeder):
@@ -18,14 +19,22 @@ class OccupationSeeder(Seeder):
     # run() will be called by Flask-Seeder
     def run(self):
         file = open(file_path)
+        salaries_file = open(salaries_file_path)
 
         data = json.load(file)
+        salaries_data = json.load(salaries_file)
 
         for each in Occupation.query.filter(Occupation.id.in_(data.keys())).all():
             # Only merge those posts which already exist in the database
             update_item = data.pop(each.id)
+            salaries_item = salaries_data[each.id] if each.id in salaries_data else {
+            }
+
+            update_item = {**update_item, **salaries_item}
+            update_item['id'] = each.id
+
             if not is_same_db_data(each, update_item):
-                self.db.session.merge(Occupation(**update_item, id=each.id))
+                self.db.session.merge(Occupation(**update_item))
                 print("Update occupation: %s" % each.id)
 
         # Only add those posts which did not exist in the database
