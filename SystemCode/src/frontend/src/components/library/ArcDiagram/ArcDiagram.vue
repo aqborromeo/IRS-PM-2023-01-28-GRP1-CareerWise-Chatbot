@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div class="title"></div>
     <div ref="arcDiagram" class="arc-diagram"></div>
@@ -140,4 +140,4 @@ onMounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped></style> -->
