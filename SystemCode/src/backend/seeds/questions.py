@@ -100,14 +100,14 @@ class QuestionSeeder(Seeder):
 
             # Open-ended
             "interest_open": {
-                "order": 310,
+                "order": 1,
                 "group": "interest",
                 "code": "interest_open",
                 "text": 'Describe in detail what you would like to do for a living.',
                 "min_response_length": 200
             },
             "experience_open": {
-                "order": 320,
+                "order": 2,
                 "group": "experience",
                 "code": "experience_open",
                 "text": 'Describe your past work experience. <br>(If you''re studying, you can talk about your extra-curricular activities)',

@@ -1,6 +1,7 @@
 from flask import current_app, jsonify, Response, request
 from flask_restful import Resource
 from sqlalchemy import asc, desc, select, join
+import Levenshtein as lev
 
 from app.models.chat import Chat, CreatedBy
 from app.models.chat_session import ChatSession, Status
@@ -19,6 +20,14 @@ auth = Auth()
 
 def get_options_dict(options):
     return list(map(lambda option: {'id': option.id, 'order': option.order, 'value': option.value, 'data_type': option.data_type.name, 'label': option.label}, options)) if options else None
+
+
+def get_nearest_option(input, options):
+    if options:
+        distances = [lev.distance(input, option.label) for option in options]
+        min_value = min(distances)
+        min_index = distances.index(min_value)
+        return options[min_index]
 
 
 class ChatsApi(Resource):
@@ -47,11 +56,21 @@ class ChatsApi(Resource):
                 'userId'], Chat.created_by == CreatedBy.bot
         ).order_by(desc('created_at')).first()
 
+        question_options = last_question_chat.question.options if last_question_chat and last_question_chat.question else False
+        option_id = request.json.get('option_id')
+
+        # if question is MCQ and no option is chosen, choose one based on closest Levenshtein distance with user input
+        closest_option = None
+        if question_options and not option_id and request.json.get('message_text'):
+            closest_option = get_nearest_option(
+                request.json.get('message_text'), question_options)
+            option_id = closest_option.id if closest_option else None
+
         parameter = {
             'user_id': token_data['userId'],
             'chat_session_id': chat_session_id,
             'message_text': request.json.get('message_text'),
-            'option_id': request.json.get('option_id'),
+            'option_id': option_id,
             'created_by': CreatedBy.user,
             'question_id': last_question_chat.question_id if last_question_chat else None
         }

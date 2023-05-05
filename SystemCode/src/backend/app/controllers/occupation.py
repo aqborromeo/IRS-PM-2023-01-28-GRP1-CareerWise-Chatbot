@@ -1,6 +1,8 @@
 from flask import current_app, jsonify, Response, request
 from flask_restful import Resource
 from sqlalchemy import or_
+from sqlalchemy.orm import aliased
+from sqlalchemy.sql.expression import select, union_all, literal_column
 
 from app.models.occupation import Occupation
 from app.models.career_path import CareerPath
@@ -41,8 +43,8 @@ class OccupationApi(Resource):
         occupation_dict = map_row(occupation)
 
         # Career paths
-        career_paths = db.session.query(CareerPath).filter(
-            or_(CareerPath.source_id == id, CareerPath.target_id == id)).all()
+        graph_fetcher = CareerPathGraphFetcher(id, CareerPath, Occupation)
+        career_paths = graph_fetcher.get_graph()
         career_paths_dict = list(map(map_career_path, career_paths))
         occupation_dict["careerPaths"] = career_paths_dict
 
@@ -53,3 +55,34 @@ class OccupationApi(Resource):
         occupation_dict["ssocJobs"] = ssoc_jobs_dict
 
         return jsonify(occupation_dict)
+
+
+class CareerPathGraphFetcher():
+    def __init__(self, start_id, graph_model, node_model):
+        self.start_id = start_id
+        self.graph_model = graph_model
+        self.node_model = node_model
+
+    def get_graph(self):
+        start_node = self.start_id
+
+        # get children of start node
+        hierarchy = db.session.query(
+            self.graph_model)\
+            .filter(self.graph_model.source_id == start_node)\
+            .cte(name="hierarchy", recursive=True)
+
+        parent = aliased(hierarchy, name="p")
+        children = aliased(self.graph_model, name="c")
+        hierarchy = hierarchy.union_all(
+            db.session.query(children)
+            .filter(children.source_id == parent.c.target_id))
+
+        graph_alias = aliased(self.graph_model, hierarchy)
+
+        # get parents of start node
+        lower_hierarchy = db.session.query(self.graph_model).filter(
+            self.graph_model.target_id == start_node)
+
+        result = db.session.query(graph_alias).union_all(lower_hierarchy).all()
+        return result

@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps } from "vue";
+import { ref, onMounted, defineProps, onUnmounted } from "vue";
 
 import { Chart, registerables } from "chart.js";
 import { SankeyController, Flow } from "chartjs-chart-sankey";
@@ -23,6 +23,7 @@ const props = defineProps({
 });
 
 const sankeyDiagram = ref(null);
+const chartInstance = ref(null);
 
 const buildData = (data) => {
   return careerPathsToSankey(data);
@@ -31,9 +32,15 @@ const buildData = (data) => {
 onMounted(() => {
   const configs = buildData(props.currentItem?.careerPaths);
 
-  new Chart(sankeyDiagram.value, {
+  chartInstance.value = new Chart(sankeyDiagram.value, {
     type: "sankey",
     ...configs,
   });
+});
+
+onUnmounted(() => {
+  if (chartInstance.value) {
+    chartInstance.value.destroy();
+  }
 });
 </script>

@@ -60,6 +60,9 @@ export const experiences = {
 };
 
 const displayMonthYear = (number) => {
+  if (!number) {
+    return null;
+  }
   if (number < 1) {
     const month = number * 12;
     return { number: month, unit: "mth" };
@@ -72,10 +75,12 @@ const displayExperienceDuration = (params) => {
   const minParams = displayMonthYear(min);
   const maxParams = displayMonthYear(max);
   return min === max
-    ? `${minParams.number}${minParams.unit}`
-    : `${`${minParams.number}${
-        minParams.unit === maxParams.unit ? "" : minParams.unit
-      }`} - ${`${maxParams.number} ${maxParams.unit}`} experience`;
+    ? `${minParams?.number || "No"}${minParams?.unit || ""} experience`
+    : `${`${minParams?.number || "No"}${
+        minParams?.unit === maxParams?.unit ? "" : minParams?.unit || ""
+      }`} - ${`${maxParams?.number || "No"} ${
+        maxParams?.unit || ""
+      }`} experience`;
 };
 
 const colors = [
