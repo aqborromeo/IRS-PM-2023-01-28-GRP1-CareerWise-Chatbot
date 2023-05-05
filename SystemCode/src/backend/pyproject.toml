@@ -22,6 +22,7 @@ Flask-Seeder = "^1.2.0"
 pandas = "^2.0.0"
 sentence-transformers = "^2.2.2"
 flask-pydantic = "^0.11.0"
+python-levenshtein = "^0.21.0"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "2.0.2"

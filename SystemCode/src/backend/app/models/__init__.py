@@ -8,6 +8,8 @@ from .occupation import Occupation
 from .result import Result
 from .career_path import CareerPath
 from .ssoc_job import SsocJob
+from .program import Program
+from .program_trend import ProgramTrend
 
 
 target_metadata = [
@@ -20,5 +22,7 @@ target_metadata = [
     Occupation.metadata,
     Result.metadata,
     CareerPath.metadata,
-    SsocJob.metadata
+    SsocJob.metadata,
+    Program.metadata,
+    ProgramTrend.metadata
 ]

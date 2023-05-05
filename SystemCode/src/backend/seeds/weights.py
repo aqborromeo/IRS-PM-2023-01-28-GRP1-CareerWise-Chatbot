@@ -110,6 +110,8 @@ class WeightSeeder(Seeder):
             for weight in self.db.session.query(Weight).filter(Weight.question_id == question.id, Weight.variable.in_(current_new_weights.keys())).all():
                 # Only merge options which already exist in the database
                 update_weight = current_new_weights.pop(weight.variable)
+                update_weight['id'] = weight.id
+
                 if not is_same_db_data(weight, update_weight):
                     self.db.session.merge(Weight(**update_weight))
 

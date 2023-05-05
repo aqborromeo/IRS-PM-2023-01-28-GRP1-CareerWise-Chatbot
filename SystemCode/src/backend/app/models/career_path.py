@@ -20,5 +20,7 @@ class CareerPath(db.Model):
     updated_at = db.Column(db.DateTime(timezone=True),
                            server_default=func.now(), onupdate=func.now())
 
-    source = relationship("Occupation", foreign_keys=[source_id])
-    target = relationship("Occupation", foreign_keys=[target_id])
+    source = relationship(Occupation, foreign_keys=[
+                          source_id])
+    target = relationship(Occupation, foreign_keys=[
+                          target_id])

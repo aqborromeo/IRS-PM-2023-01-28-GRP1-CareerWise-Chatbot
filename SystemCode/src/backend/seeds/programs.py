@@ -1,20 +1,20 @@
 from flask_seeder import Seeder
 from sqlalchemy import delete
 import json
-from app.models.ssoc_job import SsocJob
+from app.models.program import Program
 from app.utils.common import is_same_db_data
 from pathlib import Path
 
 base_path = Path(__file__).parent
-file_path = (base_path / "./data/ssoc_jobs.json").resolve()
+file_path = (base_path / "./data/programs.json").resolve()
 
 
-class SsocJobSeeder(Seeder):
+class ProgramSeeder(Seeder):
     def __init__(self, db=None):
         super().__init__(db=db)
-        self.priority = 6
-        self.label = 'SSOC jobs'
-        self.Model = SsocJob
+        self.priority = 7
+        self.label = 'Programs'
+        self.Model = Program
 
     # run() will be called by Flask-Seeder
     def run(self):
@@ -26,7 +26,8 @@ class SsocJobSeeder(Seeder):
 
         for each in self.Model.query.filter(self.Model.id.in_(data_ids)).all():
             # Only merge those items which already exist in the database
-            update_item = data.pop(each.id)
+            id_str = str(each.id)
+            update_item = data.pop(id_str)
             if not is_same_db_data(each, update_item):
                 self.db.session.merge(self.Model(**update_item))
                 print(f"Update {self.label}: {each.id}")

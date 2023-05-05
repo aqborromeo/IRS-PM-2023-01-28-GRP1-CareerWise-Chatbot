@@ -1,0 +1,2258 @@
+{
+  "1": {
+    "id": 1,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Accountancy and Business"
+  },
+  "2": {
+    "id": 2,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Accountancy (3-yr direct Honours Programme)"
+  },
+  "3": {
+    "id": 3,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Business (3-yr direct Honours Programme)"
+  },
+  "4": {
+    "id": 4,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Business and Computing"
+  },
+  "5": {
+    "id": 5,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Aerospace Engineering"
+  },
+  "6": {
+    "id": 6,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bioengineering"
+  },
+  "7": {
+    "id": 7,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Chemical and Biomolecular Engineering"
+  },
+  "8": {
+    "id": 8,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Computer Engineering"
+  },
+  "9": {
+    "id": 9,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Civil Engineering"
+  },
+  "10": {
+    "id": 10,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Computer Science"
+  },
+  "11": {
+    "id": 11,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Electrical and Electronic Engineering"
+  },
+  "12": {
+    "id": 12,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Environmental Engineering"
+  },
+  "13": {
+    "id": 13,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Information Engineering and Media"
+  },
+  "14": {
+    "id": 14,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Materials Engineering"
+  },
+  "15": {
+    "id": 15,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Mechanical Engineering"
+  },
+  "16": {
+    "id": 16,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Maritime Studies"
+  },
+  "17": {
+    "id": 17,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "18": {
+    "id": 18,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "19": {
+    "id": 19,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "20": {
+    "id": 20,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "21": {
+    "id": 21,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "22": {
+    "id": 22,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "23": {
+    "id": 23,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "24": {
+    "id": 24,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "25": {
+    "id": 25,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Biomedical Sciences **"
+  },
+  "26": {
+    "id": 26,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Biomedical Sciences (Traditional Chinese Medicine) #"
+  },
+  "27": {
+    "id": 27,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Biological Sciences"
+  },
+  "28": {
+    "id": 28,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Chemistry & Biological Chemistry"
+  },
+  "29": {
+    "id": 29,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Mathematics & Economics **"
+  },
+  "30": {
+    "id": 30,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Mathematical Science"
+  },
+  "31": {
+    "id": 31,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Physics / Applied Physics"
+  },
+  "32": {
+    "id": 32,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Sports Science and Management"
+  },
+  "33": {
+    "id": 33,
+    "university": "Nanyang Technological University",
+    "school": "National Institute of Education (NIE)",
+    "degree": "Science (with Education)"
+  },
+  "34": {
+    "id": 34,
+    "university": "Nanyang Technological University",
+    "school": "National Institute of Education (NIE)",
+    "degree": "Arts (with Education)"
+  },
+  "35": {
+    "id": 35,
+    "university": "National University of Singapore",
+    "school": "Faculty of Arts & Social Sciences",
+    "degree": "Bachelor of Arts"
+  },
+  "36": {
+    "id": 36,
+    "university": "National University of Singapore",
+    "school": "Faculty of Arts & Social Sciences",
+    "degree": "Bachelor of Arts (Hons)"
+  },
+  "37": {
+    "id": 37,
+    "university": "National University of Singapore",
+    "school": "Faculty of Arts & Social Sciences",
+    "degree": "Bachelor of Social Sciences"
+  },
+  "38": {
+    "id": 38,
+    "university": "National University of Singapore",
+    "school": "NUS Business School",
+    "degree": "Bachelor of Business Administration"
+  },
+  "39": {
+    "id": 39,
+    "university": "National University of Singapore",
+    "school": "NUS Business School",
+    "degree": "Bachelor of Business Administration (Hons)"
+  },
+  "40": {
+    "id": 40,
+    "university": "National University of Singapore",
+    "school": "NUS Business School",
+    "degree": "Bachelor of Business Administration (Accountancy)"
+  },
+  "41": {
+    "id": 41,
+    "university": "National University of Singapore",
+    "school": "NUS Business School",
+    "degree": "Bachelor of Business Administration (Accountancy) (Hons)"
+  },
+  "42": {
+    "id": 42,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Communications and Media)"
+  },
+  "43": {
+    "id": 43,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Computational Biology) **"
+  },
+  "44": {
+    "id": 44,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Computer Engineering) **"
+  },
+  "45": {
+    "id": 45,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Computer Science)"
+  },
+  "46": {
+    "id": 46,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Electronic Commerce)"
+  },
+  "47": {
+    "id": 47,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Information Systems)"
+  },
+  "48": {
+    "id": 48,
+    "university": "National University of Singapore",
+    "school": "Faculty of Dentistry",
+    "degree": "Bachelor of Dental Surgery"
+  },
+  "49": {
+    "id": 49,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Arts (Architecture) ** #"
+  },
+  "50": {
+    "id": 50,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Arts (Industrial Design)"
+  },
+  "51": {
+    "id": 51,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Science (Project and Facilities Management)"
+  },
+  "52": {
+    "id": 52,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Science (Real Estate)"
+  },
+  "53": {
+    "id": 53,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Bioengineering)"
+  },
+  "54": {
+    "id": 54,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Chemical Engineering)"
+  },
+  "55": {
+    "id": 55,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Civil Engineering)"
+  },
+  "56": {
+    "id": 56,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Computer Engineering)"
+  },
+  "57": {
+    "id": 57,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Electrical Engineering)"
+  },
+  "58": {
+    "id": 58,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Engineering Science)"
+  },
+  "59": {
+    "id": 59,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Environmental Engineering)"
+  },
+  "60": {
+    "id": 60,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Industrial and Systems Engineering)"
+  },
+  "61": {
+    "id": 61,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Materials Science and Engineering)"
+  },
+  "62": {
+    "id": 62,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Mechanical Engineering)"
+  },
+  "63": {
+    "id": 63,
+    "university": "National University of Singapore",
+    "school": "Faculty of Law",
+    "degree": "Bachelor of Laws (LLB) (Hons) #"
+  },
+  "64": {
+    "id": 64,
+    "university": "National University of Singapore",
+    "school": "YLL School of Medicine",
+    "degree": "Bachelor of Medicine and Bachelor of Surgery (MBBS) #"
+  },
+  "65": {
+    "id": 65,
+    "university": "National University of Singapore",
+    "school": "YLL School of Medicine",
+    "degree": "Bachelor of Science (Nursing)"
+  },
+  "66": {
+    "id": 66,
+    "university": "National University of Singapore",
+    "school": "YLL School of Medicine",
+    "degree": "Bachelor of Science (Nursing) (Hons)"
+  },
+  "67": {
+    "id": 67,
+    "university": "National University of Singapore",
+    "school": "Yong Siew Toh Conservatory of Music",
+    "degree": "Bachelor of Music **"
+  },
+  "68": {
+    "id": 68,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Applied Science **"
+  },
+  "69": {
+    "id": 69,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Applied Science (Hons)"
+  },
+  "70": {
+    "id": 70,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science"
+  },
+  "71": {
+    "id": 71,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Hons)"
+  },
+  "72": {
+    "id": 72,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Computational Biology) **"
+  },
+  "73": {
+    "id": 73,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Pharmacy) (Hons) #"
+  },
+  "74": {
+    "id": 74,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-years programme) *",
+    "degree": "Accountancy (4-years programme)"
+  },
+  "75": {
+    "id": 75,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-years programme) *",
+    "degree": "Accountancy (4-years programme) Cum Laude and above"
+  },
+  "76": {
+    "id": 76,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-years programme) *",
+    "degree": "Business Management (4-years programme)"
+  },
+  "77": {
+    "id": 77,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-years programme) *",
+    "degree": "Business Management (4-years programme) Cum Laude and above"
+  },
+  "78": {
+    "id": 78,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-years programme) *",
+    "degree": "Economics (4-years programme)"
+  },
+  "79": {
+    "id": 79,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-years programme) *",
+    "degree": "Economics (4-years programme) Cum Laude and above"
+  },
+  "80": {
+    "id": 80,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-years programme) *",
+    "degree": "Information Systems Management (4-years programme)"
+  },
+  "81": {
+    "id": 81,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-years programme) *",
+    "degree": "Information Systems Management (4-years programme) Cum Laude and above"
+  },
+  "82": {
+    "id": 82,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-years programme) *",
+    "degree": "Social Sciences (4-years programme)"
+  },
+  "83": {
+    "id": 83,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-years programme) *",
+    "degree": "Social Sciences (4-years programme) Cum Laude and above"
+  },
+  "84": {
+    "id": 84,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-years programme) *",
+    "degree": "Law (4-years programme) #"
+  },
+  "85": {
+    "id": 85,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-years programme) *",
+    "degree": "Law (4-years programme) Cum Laude and above #"
+  },
+  "86": {
+    "id": 86,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Biomedical Science **"
+  },
+  "87": {
+    "id": 87,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Biomedical Science (Traditional Chinese Medicine) #"
+  },
+  "88": {
+    "id": 88,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Mathematics & Economics"
+  },
+  "89": {
+    "id": 89,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Arts (Architecture) #"
+  },
+  "90": {
+    "id": 90,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Biomedical Engineering) ^^"
+  },
+  "91": {
+    "id": 91,
+    "university": "National University of Singapore",
+    "school": "YLL School of Medicine",
+    "degree": "Bachelor of Medicine and Bachelor of Surgery #"
+  },
+  "92": {
+    "id": 92,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-year programme) *",
+    "degree": "Accountancy (4-year programme)"
+  },
+  "93": {
+    "id": 93,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-year programme) *",
+    "degree": "Accountancy (4-year programme) Cum Laude and above"
+  },
+  "94": {
+    "id": 94,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-year programme) *",
+    "degree": "Business Management (4-year programme)"
+  },
+  "95": {
+    "id": 95,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-year programme) *",
+    "degree": "Business Management (4-year programme) Cum Laude and above"
+  },
+  "96": {
+    "id": 96,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-year programme) *",
+    "degree": "Economics (4-year programme)"
+  },
+  "97": {
+    "id": 97,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-year programme) *",
+    "degree": "Economics (4-year programme) Cum Laude and above"
+  },
+  "98": {
+    "id": 98,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-year programme) *",
+    "degree": "Information Systems Management (4-year programme)"
+  },
+  "99": {
+    "id": 99,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-year programme) *",
+    "degree": "Information Systems Management (4-year programme) Cum Laude and above"
+  },
+  "100": {
+    "id": 100,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-year programme) *",
+    "degree": "Social Sciences (4-year programme)"
+  },
+  "101": {
+    "id": 101,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-year programme) *",
+    "degree": "Social Sciences (4-year programme) Cum Laude and above"
+  },
+  "102": {
+    "id": 102,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-year programme) *",
+    "degree": "Law (4-year programme) #"
+  },
+  "103": {
+    "id": 103,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-year programme) *",
+    "degree": "Law (4-year programme) Cum Laude and above #"
+  },
+  "104": {
+    "id": 104,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Arts in Game Design"
+  },
+  "105": {
+    "id": 105,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Fine Arts in Digital Arts & Animation"
+  },
+  "106": {
+    "id": 106,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Science in Computer Science & Game Design"
+  },
+  "107": {
+    "id": 107,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Science in Computer Science in Real-Time Interactive Simulation"
+  },
+  "108": {
+    "id": 108,
+    "university": "Singapore Institute of Technology",
+    "school": "The Glasgow School of Art",
+    "degree": "Bachelor of Arts with Honours in Communication Design"
+  },
+  "109": {
+    "id": 109,
+    "university": "Singapore Institute of Technology",
+    "school": "The Glasgow School of Art",
+    "degree": "Bachelor of Arts with Honours in Interior Design"
+  },
+  "110": {
+    "id": 110,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Chemical Engineering"
+  },
+  "111": {
+    "id": 111,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Marine Engineering"
+  },
+  "112": {
+    "id": 112,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Mechanical Design & Manufacturing Engineering"
+  },
+  "113": {
+    "id": 113,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Naval Architecture"
+  },
+  "114": {
+    "id": 114,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Offshore Engineering"
+  },
+  "115": {
+    "id": 115,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Science with Honours in Food & Human Nutrition"
+  },
+  "116": {
+    "id": 116,
+    "university": "Singapore Institute of Technology",
+    "school": "Technische Universit\ufffdt M\ufffdnchen",
+    "degree": "Bachelor of Science in Chemical Engineering"
+  },
+  "117": {
+    "id": 117,
+    "university": "Singapore Institute of Technology",
+    "school": "Technische Universit\ufffdt M\ufffdnchen",
+    "degree": "Bachelor of Science in Electrical Engineering & Information Technology"
+  },
+  "118": {
+    "id": 118,
+    "university": "Singapore Institute of Technology",
+    "school": "The Culinary Institute of America",
+    "degree": "Bachelor of Professional Studies in Culinary Arts Management"
+  },
+  "119": {
+    "id": 119,
+    "university": "Singapore Institute of Technology",
+    "school": "Trinity College Dublin",
+    "degree": "Bachelor in Science (Occupational Therapy)"
+  },
+  "120": {
+    "id": 120,
+    "university": "Singapore Institute of Technology",
+    "school": "Trinity College Dublin",
+    "degree": "Bachelor in Science (Physiotherapy)"
+  },
+  "121": {
+    "id": 121,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Glasgow",
+    "degree": "Bachelor of Engineering with Honours in Aeronautical Engineering"
+  },
+  "122": {
+    "id": 122,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Glasgow",
+    "degree": "Bachelor of Engineering with Honours in Aerospace Systems"
+  },
+  "123": {
+    "id": 123,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Glasgow",
+    "degree": "Bachelor of Engineering with Honours in Mechanical Design Engineering"
+  },
+  "124": {
+    "id": 124,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Glasgow",
+    "degree": "Bachelor of Engineering with Honours in Mechatronics"
+  },
+  "125": {
+    "id": 125,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Manchester",
+    "degree": "Bachelor of Science with Honours in Nursing Practice"
+  },
+  "126": {
+    "id": 126,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Nevada",
+    "degree": "Las Vegas"
+  },
+  "127": {
+    "id": 127,
+    "university": "Singapore Institute of Technology",
+    "school": "Wheelock College",
+    "degree": "Bachelor of Science in Early Childhood Education"
+  },
+  "128": {
+    "id": 128,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Aerospace Engineering and Economics **"
+  },
+  "129": {
+    "id": 129,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Business and Computer Engineering **"
+  },
+  "130": {
+    "id": 130,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Chemical And Biomolecular Engineering and Economics **"
+  },
+  "131": {
+    "id": 131,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Environmental Engineering and Economics **"
+  },
+  "132": {
+    "id": 132,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Information Engineering And Media and Economics **"
+  },
+  "133": {
+    "id": 133,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Mechanical Engineering and Economics **"
+  },
+  "134": {
+    "id": 134,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Biomedical Engineering)"
+  },
+  "135": {
+    "id": 135,
+    "university": "National University of Singapore",
+    "school": "Faculty of Law",
+    "degree": "Bachelor of Laws (L.L.B) (Hons) #"
+  },
+  "136": {
+    "id": 136,
+    "university": "National University of Singapore",
+    "school": "Yong Siew Toh Conservatory of Music",
+    "degree": "Bachelor of Music"
+  },
+  "137": {
+    "id": 137,
+    "university": "National University of Singapore",
+    "school": "Multi-Disciplinary Programme",
+    "degree": "Bachelor of Environmental Studies"
+  },
+  "138": {
+    "id": 138,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-year programme) *",
+    "degree": "Accountancy"
+  },
+  "139": {
+    "id": 139,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-year programme) *",
+    "degree": "Accountancy Cum Laude and above"
+  },
+  "140": {
+    "id": 140,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-year programme) *",
+    "degree": "Business Management"
+  },
+  "141": {
+    "id": 141,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-year programme) *",
+    "degree": "Business Management Cum Laude and above"
+  },
+  "142": {
+    "id": 142,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-year programme) *",
+    "degree": "Economics"
+  },
+  "143": {
+    "id": 143,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-year programme) *",
+    "degree": "Economics Cum Laude and above"
+  },
+  "144": {
+    "id": 144,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-year programme) *",
+    "degree": "Information Systems Management"
+  },
+  "145": {
+    "id": 145,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-year programme) *",
+    "degree": "Information Systems Management Cum Laude and above"
+  },
+  "146": {
+    "id": 146,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-year programme) *",
+    "degree": "Social Sciences"
+  },
+  "147": {
+    "id": 147,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-year programme) *",
+    "degree": "Social Sciences Cum Laude and above"
+  },
+  "148": {
+    "id": 148,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-year programme) *",
+    "degree": "Law #"
+  },
+  "149": {
+    "id": 149,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-year programme) *",
+    "degree": "Law Cum Laude and above #"
+  },
+  "150": {
+    "id": 150,
+    "university": "Singapore University of Technology and Design",
+    "school": null,
+    "degree": "Bachelor of Engineering (Engineering Product Development)"
+  },
+  "151": {
+    "id": 151,
+    "university": "Singapore University of Technology and Design",
+    "school": null,
+    "degree": "Bachelor of Engineering (Engineering Systems and Design)"
+  },
+  "152": {
+    "id": 152,
+    "university": "Singapore University of Technology and Design",
+    "school": null,
+    "degree": "Bachelor of Engineering (Information Systems Technology and Design)"
+  },
+  "153": {
+    "id": 153,
+    "university": "Singapore University of Technology and Design",
+    "school": null,
+    "degree": "Bachelor of Science (Architecture and Sustainable Design) ###"
+  },
+  "154": {
+    "id": 154,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Arts in Game Design **"
+  },
+  "155": {
+    "id": 155,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Science in Computer Science & Game Design **"
+  },
+  "156": {
+    "id": 156,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Electrical Power Engineering"
+  },
+  "157": {
+    "id": 157,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology -Trinity College Dublin",
+    "degree": "Bachelor in Science (Diagnostic Radiography)"
+  },
+  "158": {
+    "id": 158,
+    "university": "Singapore Institute of Technology",
+    "school": "Trinity College Dublin",
+    "degree": "Bachelor in Science (Radiation Therapy) **"
+  },
+  "159": {
+    "id": 159,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Glasgow",
+    "degree": "Bachelor of Science with Honours in Computing Science"
+  },
+  "160": {
+    "id": 160,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Accountancy"
+  },
+  "161": {
+    "id": 161,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Business"
+  },
+  "162": {
+    "id": 162,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Materials Engineering and Economics **"
+  },
+  "163": {
+    "id": 163,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "164": {
+    "id": 164,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "165": {
+    "id": 165,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Biomedical Sciences & Chinese Medicine #"
+  },
+  "166": {
+    "id": 166,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Mathematical Sciences"
+  },
+  "167": {
+    "id": 167,
+    "university": "Nanyang Technological University",
+    "school": "Sports Science and Management",
+    "degree": "Sports Science and Management"
+  },
+  "168": {
+    "id": 168,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Pharmacy)(Hons) #"
+  },
+  "169": {
+    "id": 169,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Communications And Media) **"
+  },
+  "170": {
+    "id": 170,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Electronic Commerce) **"
+  },
+  "171": {
+    "id": 171,
+    "university": "National University of Singapore",
+    "school": "Yong Loo Lin School (Medicine)",
+    "degree": "Bachelor of Medicine and Bachelor Of Surgery #"
+  },
+  "172": {
+    "id": 172,
+    "university": "National University of Singapore",
+    "school": "Yong Loo Lin School (Medicine)",
+    "degree": "Bachelor of Science (Nursing)"
+  },
+  "173": {
+    "id": 173,
+    "university": "National University of Singapore",
+    "school": "Yong Loo Lin School (Medicine)",
+    "degree": "Bachelor of Science (Nursing) (Hons)"
+  },
+  "174": {
+    "id": 174,
+    "university": "Singapore Institute of Technology",
+    "school": "Trinity College Dublin / Singapore Institute of Technology-Trinity College Dublin",
+    "degree": "Bachelor in Science (Diagnostic Radiography)"
+  },
+  "175": {
+    "id": 175,
+    "university": "Singapore Institute of Technology",
+    "school": "Trinity College Dublin / Singapore Institute of Technology-Trinity College Dublin",
+    "degree": "Bachelor in Science (Occupational Therapy)"
+  },
+  "176": {
+    "id": 176,
+    "university": "Singapore Institute of Technology",
+    "school": "Trinity College Dublin / Singapore Institute of Technology-Trinity College Dublin",
+    "degree": "Bachelor in Science (Physiotherapy)"
+  },
+  "177": {
+    "id": 177,
+    "university": "Singapore Institute of Technology",
+    "school": "Trinity College Dublin / Singapore Institute of Technology-Trinity College Dublin",
+    "degree": "Bachelor in Science (Radiation Therapy) **"
+  },
+  "178": {
+    "id": 178,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Liverpool",
+    "degree": "Bachelor of Arts with Honours in Criminology and Security"
+  },
+  "179": {
+    "id": 179,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Bachelor of Accountancy (Hons)"
+  },
+  "180": {
+    "id": 180,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Double Degree in Bachelor of Accountancy (Hons) and Bachelor of Business (Hons)"
+  },
+  "181": {
+    "id": 181,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Bachelor of Business (Hons)"
+  },
+  "182": {
+    "id": 182,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Double Degree in Bachelor of Business (Hons) and Bachelor of Engineering (Hons) (Computer Science)"
+  },
+  "183": {
+    "id": 183,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Aerospace Engineering)"
+  },
+  "184": {
+    "id": 184,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Bachelor of Engineering (Hons) (Aerospace Engineering) and Bachelor of Arts (Hons) in Economics **"
+  },
+  "185": {
+    "id": 185,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Bioengineering)"
+  },
+  "186": {
+    "id": 186,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering  (Hons) (Chemical And Biomolecular Engineering)"
+  },
+  "187": {
+    "id": 187,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Bachelor of Engineering  (Hons) (Chemical And Biomolecular Engineering) and Bachelor of Arts (Hons) in Economics **"
+  },
+  "188": {
+    "id": 188,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Civil Engineering)"
+  },
+  "189": {
+    "id": 189,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Bachelor of Engineering (Hons) (Civil Engineering) and Bachelor of Arts (Hons) in Economics **"
+  },
+  "190": {
+    "id": 190,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Computer Engineering)"
+  },
+  "191": {
+    "id": 191,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Computer Science)"
+  },
+  "192": {
+    "id": 192,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Bachelor of Business (Hons) and Bachelor of Engineering (Hons) (Computer Engineering) **"
+  },
+  "193": {
+    "id": 193,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Electrical & Electronic Engineering)"
+  },
+  "194": {
+    "id": 194,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Environmental Engineering)"
+  },
+  "195": {
+    "id": 195,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Information Engineering & Media)"
+  },
+  "196": {
+    "id": 196,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Bachelor of Engineering (Hons) (Information Engineering & Media) and Bachelor of Arts (Hons) in Economics **"
+  },
+  "197": {
+    "id": 197,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Science (Hons) (Maritime Studies)"
+  },
+  "198": {
+    "id": 198,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Materials Engineering)"
+  },
+  "199": {
+    "id": 199,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Bachelor of Engineering (Hons) (Materials Engineering) and Bachelor of Arts (Hons) in Economics **"
+  },
+  "200": {
+    "id": 200,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Engineering (Hons) (Mechanical Engineering)"
+  },
+  "201": {
+    "id": 201,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Bachelor of Engineering (Hons) (Mechanical Engineering) and Bachelor of Arts (Hons) in Economics **"
+  },
+  "202": {
+    "id": 202,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Fine Arts (Hons)"
+  },
+  "203": {
+    "id": 203,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in Chinese"
+  },
+  "204": {
+    "id": 204,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Communication Studies (Hons)"
+  },
+  "205": {
+    "id": 205,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in Economics"
+  },
+  "206": {
+    "id": 206,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in English"
+  },
+  "207": {
+    "id": 207,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in History"
+  },
+  "208": {
+    "id": 208,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in Linguistics And Multilingual Studies"
+  },
+  "209": {
+    "id": 209,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in Philosophy **"
+  },
+  "210": {
+    "id": 210,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in Psychology"
+  },
+  "211": {
+    "id": 211,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in Public Policy And Global Affairs"
+  },
+  "212": {
+    "id": 212,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Bachelor of Arts (Hons) in Sociology"
+  },
+  "213": {
+    "id": 213,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Double Degree in Bachelor of Science (Hons) in Biomedical Sciences and Bachelor of Medicine (Chinese Medicine) #"
+  },
+  "214": {
+    "id": 214,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Bachelor of Science (Hons) in Biological Sciences"
+  },
+  "215": {
+    "id": 215,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Bachelor of Science (Hons) in Chemistry & Biological Chemistry"
+  },
+  "216": {
+    "id": 216,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Bachelor of Science (Hons) in Mathematical Sciences"
+  },
+  "217": {
+    "id": 217,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Bachelor of Science (Hons) in Mathematics & Economics"
+  },
+  "218": {
+    "id": 218,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Bachelor of Science (Hons) in Physics/Applied Physics"
+  },
+  "219": {
+    "id": 219,
+    "university": "Nanyang Technological University",
+    "school": "Sports Science and Management",
+    "degree": "Bachelor of Science (Hons) (Sport Science & Management)"
+  },
+  "220": {
+    "id": 220,
+    "university": "Nanyang Technological University",
+    "school": "National Institute of Education (NIE)",
+    "degree": "Bachelor of Arts (Hons) (Education)"
+  },
+  "221": {
+    "id": 221,
+    "university": "Nanyang Technological University",
+    "school": "National Institute of Education (NIE)",
+    "degree": "Bachelor of Science (Hons) (Education)"
+  },
+  "222": {
+    "id": 222,
+    "university": "National University of Singapore",
+    "school": "Faculty of Law",
+    "degree": "Bachelor of Laws #"
+  },
+  "223": {
+    "id": 223,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Pharmacy) #"
+  },
+  "224": {
+    "id": 224,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Information Security) **"
+  },
+  "225": {
+    "id": 225,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Science (Business Analytics)"
+  },
+  "226": {
+    "id": 226,
+    "university": "National University of Singapore",
+    "school": "YST Conservatory Of Music",
+    "degree": "Bachelor of Music"
+  },
+  "227": {
+    "id": 227,
+    "university": "National University of Singapore",
+    "school": "Yale-NUS College",
+    "degree": "Bachelor of Arts with Honours"
+  },
+  "228": {
+    "id": 228,
+    "university": "National University of Singapore",
+    "school": "Yale-NUS College",
+    "degree": "Bachelor of Science with Honours"
+  },
+  "229": {
+    "id": 229,
+    "university": "National University of Singapore",
+    "school": "Multi-Disciplinary Programmes",
+    "degree": "Bachelor of Engineering (Computer Engineering)"
+  },
+  "230": {
+    "id": 230,
+    "university": "National University of Singapore",
+    "school": "Multi-Disciplinary Programmes",
+    "degree": "Bachelor of Environmental Studies"
+  },
+  "231": {
+    "id": 231,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-years programme) *",
+    "degree": "Accountancy"
+  },
+  "232": {
+    "id": 232,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-years programme) *",
+    "degree": "Accountancy Cum Laude and above"
+  },
+  "233": {
+    "id": 233,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-years programme) *",
+    "degree": "Business Management"
+  },
+  "234": {
+    "id": 234,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-years programme) *",
+    "degree": "Business Management Cum Laude and above"
+  },
+  "235": {
+    "id": 235,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-years programme) *",
+    "degree": "Economics"
+  },
+  "236": {
+    "id": 236,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-years programme) *",
+    "degree": "Economics Cum Laude and above"
+  },
+  "237": {
+    "id": 237,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-years programme) *",
+    "degree": "Information Systems Management"
+  },
+  "238": {
+    "id": 238,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-years programme) *",
+    "degree": "Information Systems Management Cum Laude and above"
+  },
+  "239": {
+    "id": 239,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-years programme) *",
+    "degree": "Social Sciences"
+  },
+  "240": {
+    "id": 240,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-years programme) *",
+    "degree": "Social Sciences Cum Laude and above"
+  },
+  "241": {
+    "id": 241,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-years programme) *",
+    "degree": "Law #"
+  },
+  "242": {
+    "id": 242,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-years programme) *",
+    "degree": "Law Cum Laude and above #"
+  },
+  "243": {
+    "id": 243,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Arts in Game Design ^"
+  },
+  "244": {
+    "id": 244,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Fine Arts in Digital Arts & Animation ^"
+  },
+  "245": {
+    "id": 245,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Science in Computer Science & Game Design ^"
+  },
+  "246": {
+    "id": 246,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Marine Engineering ^"
+  },
+  "247": {
+    "id": 247,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Naval Architecture ^"
+  },
+  "248": {
+    "id": 248,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Offshore Engineering ^"
+  },
+  "249": {
+    "id": 249,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology -Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Diagnostic Radiography) **"
+  },
+  "250": {
+    "id": 250,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology -Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Occupational Therapy)"
+  },
+  "251": {
+    "id": 251,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology -Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Physiotherapy)"
+  },
+  "252": {
+    "id": 252,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology -Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Radiation Therapy) **"
+  },
+  "253": {
+    "id": 253,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology",
+    "degree": "Bachelor of Accountancy with Honours"
+  },
+  "254": {
+    "id": 254,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology",
+    "degree": "Bachelor of Hospitality Business with Honours ^"
+  },
+  "255": {
+    "id": 255,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Business and Computing ^"
+  },
+  "256": {
+    "id": 256,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Chemical & Biomolecular Engineering"
+  },
+  "257": {
+    "id": 257,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Chemical & Biomolecular Engineering and Economics **"
+  },
+  "258": {
+    "id": 258,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Computer Engineering and Economics **"
+  },
+  "259": {
+    "id": 259,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Electrical & Electronic Engineering"
+  },
+  "260": {
+    "id": 260,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Information Engineering & Media"
+  },
+  "261": {
+    "id": 261,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "262": {
+    "id": 262,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "263": {
+    "id": 263,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "264": {
+    "id": 264,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Biomedical Sciences & Chinese Medicine # ^"
+  },
+  "265": {
+    "id": 265,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Environmental Earth Systems Science ^"
+  },
+  "266": {
+    "id": 266,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Physics & Applied Physics"
+  },
+  "267": {
+    "id": 267,
+    "university": "Nanyang Technological University",
+    "school": "Sports Science and Management",
+    "degree": "Sport Science and Management"
+  },
+  "268": {
+    "id": 268,
+    "university": "Nanyang Technological University",
+    "school": "Lee Kong Chian School of Medicine",
+    "degree": "Medicine ##"
+  },
+  "269": {
+    "id": 269,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Engineering Science) **"
+  },
+  "270": {
+    "id": 270,
+    "university": "National University of Singapore",
+    "school": "NUS Business School",
+    "degree": "Bachelor of Business Administration (Accountancy) ^"
+  },
+  "271": {
+    "id": 271,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Arts (Architecture) # **"
+  },
+  "272": {
+    "id": 272,
+    "university": "National University of Singapore",
+    "school": "YLL School of Medicine",
+    "degree": "Bachelor of Medicine and Bachelor of Surgery # **"
+  },
+  "273": {
+    "id": 273,
+    "university": "National University of Singapore",
+    "school": "Yale-NUS College",
+    "degree": "Bachelor of Science with Honours ^"
+  },
+  "274": {
+    "id": 274,
+    "university": "National University of Singapore",
+    "school": "Multidisciplinary Programmes",
+    "degree": "Bachelor of Engineering (Computer Engineering)"
+  },
+  "275": {
+    "id": 275,
+    "university": "National University of Singapore",
+    "school": "Multidisciplinary Programmes",
+    "degree": "Bachelor of Environmental Studies"
+  },
+  "276": {
+    "id": 276,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Fine Arts in Digital Art and Animation"
+  },
+  "277": {
+    "id": 277,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Science in Computer Science and Game Design ^"
+  },
+  "278": {
+    "id": 278,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Mechanical Design and Manufacturing Engineering"
+  },
+  "279": {
+    "id": 279,
+    "university": "Singapore Institute of Technology",
+    "school": "Newcastle University",
+    "degree": "Bachelor of Science with Honours in Food and Human Nutrition"
+  },
+  "280": {
+    "id": 280,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Accountancy with Honours"
+  },
+  "281": {
+    "id": 281,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Information & Communications Technology (Information Security) ^"
+  },
+  "282": {
+    "id": 282,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Information & Communications Technology (Software Engineering)"
+  },
+  "283": {
+    "id": 283,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Sustainable Infrastructure Engineering (Land)"
+  },
+  "284": {
+    "id": 284,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Hospitality Business with Honours"
+  },
+  "285": {
+    "id": 285,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-University of Glasgow",
+    "degree": "Bachelor of Science with Honours in Nursing"
+  },
+  "286": {
+    "id": 286,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Diagnostic Radiography) ^"
+  },
+  "287": {
+    "id": 287,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Occupational Therapy)"
+  },
+  "288": {
+    "id": 288,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Physiotherapy)"
+  },
+  "289": {
+    "id": 289,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Radiation Therapy) **"
+  },
+  "290": {
+    "id": 290,
+    "university": "Singapore Institute of Technology",
+    "school": "The Culinary Institute of America",
+    "degree": "Bachelor of Business Administration in Food Business Management"
+  },
+  "291": {
+    "id": 291,
+    "university": "Singapore Management University",
+    "school": "School of Accountancy (4-year programme) *",
+    "degree": "Accountancy (Cum Laude and above)"
+  },
+  "292": {
+    "id": 292,
+    "university": "Singapore Management University",
+    "school": "School of Business (4-year programme) *",
+    "degree": "Business Management (Cum Laude and above)"
+  },
+  "293": {
+    "id": 293,
+    "university": "Singapore Management University",
+    "school": "School of Economics (4-year programme) *",
+    "degree": "Economics (Cum Laude and above)"
+  },
+  "294": {
+    "id": 294,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-year programme) *",
+    "degree": "Information Systems"
+  },
+  "295": {
+    "id": 295,
+    "university": "Singapore Management University",
+    "school": "School of Information Systems (4-year programme) *",
+    "degree": "Information Systems (Cum Laude and above)"
+  },
+  "296": {
+    "id": 296,
+    "university": "Singapore Management University",
+    "school": "School of Social Sciences (4-year programme) *",
+    "degree": "Social Sciences (Cum Laude and above)"
+  },
+  "297": {
+    "id": 297,
+    "university": "Singapore Management University",
+    "school": "School of Law (4-year programme) *",
+    "degree": "Law (Cum Laude and above) #"
+  },
+  "298": {
+    "id": 298,
+    "university": "Singapore University of Social Sciences",
+    "school": "School of Business",
+    "degree": "Bachelor of Accountancy"
+  },
+  "299": {
+    "id": 299,
+    "university": "Singapore University of Social Sciences",
+    "school": "School of Business",
+    "degree": "Bachelor of Science in Finance"
+  },
+  "300": {
+    "id": 300,
+    "university": "Singapore University of Social Sciences",
+    "school": "School of Business",
+    "degree": "Bachelor of Science in Marketing"
+  },
+  "301": {
+    "id": 301,
+    "university": "Singapore University of Technology and Design",
+    "school": null,
+    "degree": "Bachelor of Science (Architecture and Sustainable Design)"
+  },
+  "302": {
+    "id": 302,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Civil Engineering and Economics **"
+  },
+  "303": {
+    "id": 303,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "304": {
+    "id": 304,
+    "university": "Nanyang Technological University",
+    "school": "College of Sciences",
+    "degree": "Environmental Earth Systems Sciences ^"
+  },
+  "305": {
+    "id": 305,
+    "university": "Nanyang Technological University",
+    "school": "Lee Kong Chian School of Medicine",
+    "degree": "Medicine #"
+  },
+  "306": {
+    "id": 306,
+    "university": "National University of Singapore",
+    "school": "Faculty of Engineering",
+    "degree": "Bachelor of Engineering (Engineering Science) ^"
+  },
+  "307": {
+    "id": 307,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Hons) ^"
+  },
+  "308": {
+    "id": 308,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Arts (Industrial Design) ^"
+  },
+  "309": {
+    "id": 309,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Information & Communications Technology (Information Security)"
+  },
+  "310": {
+    "id": 310,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Pharmaceutical Engineering"
+  },
+  "311": {
+    "id": 311,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Sustainable Infrastructure Engineering (Building Services)"
+  },
+  "312": {
+    "id": 312,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Telematics (Intelligent Transportation Systems Engineering)"
+  },
+  "313": {
+    "id": 313,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-DigiPen Institute of Technology",
+    "degree": "Bachelor of Engineering in Systems Engineering (ElectroMechanical Systems) ^"
+  },
+  "314": {
+    "id": 314,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Massey University",
+    "degree": "Bachelor of Food Technology with Honours"
+  },
+  "315": {
+    "id": 315,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Chemical Engineering"
+  },
+  "316": {
+    "id": 316,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Electrical Power Engineering ^"
+  },
+  "317": {
+    "id": 317,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Marine Engineering ^"
+  },
+  "318": {
+    "id": 318,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Mechanical Design and Manufacturing Engineering ^"
+  },
+  "319": {
+    "id": 319,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Naval Architecture **"
+  },
+  "320": {
+    "id": 320,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Offshore Engineering **"
+  },
+  "321": {
+    "id": 321,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Diagnostic Radiography) **"
+  },
+  "322": {
+    "id": 322,
+    "university": "Singapore Institute of Technology",
+    "school": "Technische Universit\ufffdt M\ufffdnchen",
+    "degree": "Bachelor of Science in Electrical Engineering & Information Technology **"
+  },
+  "323": {
+    "id": 323,
+    "university": "Singapore Institute of Technology",
+    "school": "The Culinary Institute of America",
+    "degree": "Bachelor of Business Administration in Food Business Management ^"
+  },
+  "324": {
+    "id": 324,
+    "university": "Singapore University of Social Sciences",
+    "school": "S R Nathan School of Human Development",
+    "degree": "Bachelor of Human Resource Management"
+  },
+  "325": {
+    "id": 325,
+    "university": "Nanyang Technological University",
+    "school": "College of Business (Nanyang Business School)",
+    "degree": "Double Degree in Business and Computer Engineering/Computing"
+  },
+  "326": {
+    "id": 326,
+    "university": "Nanyang Technological University",
+    "school": "College of Engineering",
+    "degree": "Double Degree in Engineering and Economics ^"
+  },
+  "327": {
+    "id": 327,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "328": {
+    "id": 328,
+    "university": "Nanyang Technological University",
+    "school": "College of Humanities",
+    "degree": "Arts & Social Sciences"
+  },
+  "329": {
+    "id": 329,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Biological Sciences"
+  },
+  "330": {
+    "id": 330,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Biomedical Sciences and Chinese Medicine # ^"
+  },
+  "331": {
+    "id": 331,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Chemistry and Biological Chemistry"
+  },
+  "332": {
+    "id": 332,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Environmental Earth Systems Sciences ^"
+  },
+  "333": {
+    "id": 333,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Mathematical Sciences"
+  },
+  "334": {
+    "id": 334,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Mathematics and Economics"
+  },
+  "335": {
+    "id": 335,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Physics and Applied Physics"
+  },
+  "336": {
+    "id": 336,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Computational Biology) ^"
+  },
+  "337": {
+    "id": 337,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Data Science and Analytics) ^"
+  },
+  "338": {
+    "id": 338,
+    "university": "National University of Singapore",
+    "school": "NUS Business School",
+    "degree": "Bachelor of Business Administration ^"
+  },
+  "339": {
+    "id": 339,
+    "university": "National University of Singapore",
+    "school": "School of Computing",
+    "degree": "Bachelor of Computing (Information Security) ^"
+  },
+  "340": {
+    "id": 340,
+    "university": "National University of Singapore",
+    "school": "School of Design & Environment",
+    "degree": "Bachelor of Arts (Architecture)"
+  },
+  "341": {
+    "id": 341,
+    "university": "Singapore Institute of Technology",
+    "school": "DigiPen Institute of Technology",
+    "degree": "Bachelor of Science in Computer Science and Game Design"
+  },
+  "342": {
+    "id": 342,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- DigiPen Institute of Technology",
+    "degree": "Bachelor of Engineering with Honours in Systems Engineering (ElectroMechanical Systems)"
+  },
+  "343": {
+    "id": 343,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- Massey University",
+    "degree": "Bachelor of Food Technology with Honours"
+  },
+  "344": {
+    "id": 344,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Chemical Engineering"
+  },
+  "345": {
+    "id": 345,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Electrical Power Engineering"
+  },
+  "346": {
+    "id": 346,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Marine Engineering ^"
+  },
+  "347": {
+    "id": 347,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Mechanical Design and Manufacturing Engineering"
+  },
+  "348": {
+    "id": 348,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Naval Architecture ^"
+  },
+  "349": {
+    "id": 349,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT- Newcastle University",
+    "degree": "Bachelor of Engineering with Honours in Offshore Engineering ^"
+  },
+  "350": {
+    "id": 350,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT / SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Diagnostic Radiography)"
+  },
+  "351": {
+    "id": 351,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT / SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Occupational Therapy)"
+  },
+  "352": {
+    "id": 352,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT / SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Physiotherapy)"
+  },
+  "353": {
+    "id": 353,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT / SIT-Trinity College Dublin / Trinity College Dublin",
+    "degree": "Bachelor in Science (Radiation Therapy) ^"
+  },
+  "354": {
+    "id": 354,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-University of Glasgow",
+    "degree": "Bachelor of Engineering with Honours in Civil Engineering"
+  },
+  "355": {
+    "id": 355,
+    "university": "Singapore Institute of Technology",
+    "school": "University of Glasgow",
+    "degree": "Bachelor of Engineering with Honours in Aerospace Systems ^"
+  },
+  "356": {
+    "id": 356,
+    "university": "Singapore University of Social Sciences",
+    "school": "S R Nathan School of Human Development",
+    "degree": "Bachelor of Early Childhood Education ^"
+  },
+  "357": {
+    "id": 357,
+    "university": "Singapore University of Social Sciences",
+    "school": "S R Nathan School of Human Development",
+    "degree": "Bachelor of Social Work"
+  },
+  "358": {
+    "id": 358,
+    "university": "Singapore University of Social Sciences",
+    "school": "School of Business",
+    "degree": "Bachelor of Science in Finance ^"
+  },
+  "359": {
+    "id": 359,
+    "university": "Singapore University of Social Sciences",
+    "school": "School of Business",
+    "degree": "Bachelor of Science in Supply Chain Management ^"
+  },
+  "360": {
+    "id": 360,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Biological Sciences / Biomedical Sciences"
+  },
+  "361": {
+    "id": 361,
+    "university": "Nanyang Technological University",
+    "school": "College of Science",
+    "degree": "Mathematical Sciences / Mathematical Sciences and Economics"
+  },
+  "362": {
+    "id": 362,
+    "university": "Nanyang Technological University",
+    "school": "National Institute of Education (NIE)",
+    "degree": "Science (with Education) ^"
+  },
+  "363": {
+    "id": 363,
+    "university": "National University of Singapore",
+    "school": "Faculty of Science",
+    "degree": "Bachelor of Science (Data Science and Analytics)"
+  },
+  "364": {
+    "id": 364,
+    "university": "National University of Singapore",
+    "school": "Yong Loo Lin School (Medicine)",
+    "degree": "Bachelor of Medicine and Bachelor of Surgery # **"
+  },
+  "365": {
+    "id": 365,
+    "university": "National University of Singapore",
+    "school": "YST Conservatory of Music",
+    "degree": "Bachelor of Music ^"
+  },
+  "366": {
+    "id": 366,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Aircraft Systems Engineering"
+  },
+  "367": {
+    "id": 367,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Engineering with Honours in Sustainable Infrastructure Engineering (Land) ^"
+  },
+  "368": {
+    "id": 368,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Science (Diagnostic Radiography)"
+  },
+  "369": {
+    "id": 369,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Science (Occupational Therapy)"
+  },
+  "370": {
+    "id": 370,
+    "university": "Singapore Institute of Technology",
+    "school": "Singapore Institute of Technology (SIT)",
+    "degree": "Bachelor of Science (Radiation Therapy) ^"
+  },
+  "371": {
+    "id": 371,
+    "university": "Singapore Institute of Technology",
+    "school": "SIT-Trinity College Dublin",
+    "degree": "Bachelor of Science (Physiotherapy)"
+  },
+  "372": {
+    "id": 372,
+    "university": "Singapore Institute of Technology",
+    "school": "Technische Universit\ufffdt M\ufffdnchen",
+    "degree": "Bachelor of Science in Electrical Engineering & Information Technology ^"
+  },
+  "373": {
+    "id": 373,
+    "university": "Singapore University of Social Sciences",
+    "school": "S R Nathan School of Human Development",
+    "degree": "Bachelor of Early Childhood Education"
+  },
+  "374": {
+    "id": 374,
+    "university": "Singapore University of Social Sciences",
+    "school": "School of Business",
+    "degree": "Bachelor of Science in Business Analytics"
+  },
+  "375": {
+    "id": 375,
+    "university": "Singapore University of Social Sciences",
+    "school": "School of Business",
+    "degree": "Bachelor of Science in Supply Chain Management"
+  },
+  "376": {
+    "id": 376,
+    "university": "Singapore University of Technology and Design",
+    "school": null,
+    "degree": "Bachelor of Engineering (Computer Science and Design)"
+  }
+}

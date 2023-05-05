@@ -1,4 +1,5 @@
 from flask_seeder import Seeder, generator
+from sqlalchemy import delete
 from app.models.question import Question
 from app.utils.common import is_same_db_data
 
@@ -98,15 +99,15 @@ class QuestionSeeder(Seeder):
             },
 
             # Open-ended
-            "open_interest": {
-                "order": 310,
+            "interest_open": {
+                "order": 1,
                 "group": "interest",
                 "code": "interest_open",
                 "text": 'Describe in detail what you would like to do for a living.',
                 "min_response_length": 200
             },
-            "open_experience": {
-                "order": 320,
+            "experience_open": {
+                "order": 2,
                 "group": "experience",
                 "code": "experience_open",
                 "text": 'Describe your past work experience. <br>(If you''re studying, you can talk about your extra-curricular activities)',
@@ -122,15 +123,16 @@ class QuestionSeeder(Seeder):
             }
         }
 
+        original_new_questions = new_questions.copy()
+
         for each in Question.query.filter(Question.code.in_(new_questions.keys())).all():
             # Only merge those posts which already exist in the database
-
             update_question = new_questions.pop(each.code)
             update_question['id'] = each.id
 
             if not is_same_db_data(each, update_question):
                 self.db.session.merge(Question(**update_question))
-                print("Update question: %s" % update_question['code'])
+                print(f"Update question: {update_question['code']}")
 
         # Only add those posts which did not exist in the database
         new_questions_values = new_questions.values()
@@ -142,4 +144,12 @@ class QuestionSeeder(Seeder):
             print("Add %s questions" % str(len(new_questions_values)))
 
         # Now we commit our modifications (merges) and inserts (adds) to the database!
+        self.db.session.commit()
+
+        # Purge non-existent items
+        data_codes = original_new_questions.keys()
+        delete_statement = delete(Question).where(
+            Question.code.not_in(data_codes))
+        self.db.session.execute(delete_statement)
+
         self.db.session.commit()

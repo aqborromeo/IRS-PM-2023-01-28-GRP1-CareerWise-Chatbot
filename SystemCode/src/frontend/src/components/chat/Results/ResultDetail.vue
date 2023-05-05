@@ -36,7 +36,7 @@
           v-if="occupation && occupation.ssocJobs && occupation.ssocJobs.length"
         >
           <Collapse :bordered="false">
-            <CollapsePanel key="task" :header="'Job Titles & Salary'">
+            <CollapsePanel key="salary" :header="'Job Titles & Salary'">
               <Table :dataSource="ssocJobs" :columns="ssocJobsColumns"></Table>
             </CollapsePanel>
           </Collapse>
@@ -50,12 +50,9 @@
             occupation.careerPaths.length
           "
         >
-          <Collapse :bordered="false">
-            <CollapsePanel key="task" :header="'Career Paths'">
-              <ArcDiagram
-                :data="careerPathsGraphData"
-                :currentItem="occupation"
-              />
+          <Collapse :bordered="false" :defaultActiveKey="['path']">
+            <CollapsePanel key="path" :header="'Career Paths'">
+              <SankeyDiagram :currentItem="occupation" />
             </CollapsePanel>
           </Collapse>
         </div>
@@ -68,9 +65,7 @@
 import { computed, defineProps } from "vue";
 import { CloseOutlined } from "@ant-design/icons-vue";
 import { Collapse, CollapsePanel, Button, Table } from "ant-design-vue";
-import ArcDiagram from "@/components/library/ArcDiagram/ArcDiagram.vue";
-
-import { careerPathsToGraph } from "@/plugins/occupation";
+import SankeyDiagram from "@/components/library/SankeyDiagram/SankeyDiagram.vue";
 
 const props = defineProps({
   occupation: {
@@ -92,10 +87,6 @@ const splitText = (text) => {
 
 const splitTasks = computed(() => {
   return splitText(props.occupation.task);
-});
-
-const careerPathsGraphData = computed(() => {
-  return careerPathsToGraph(props.occupation.careerPaths);
 });
 
 const displaySalary = (salary) => {
