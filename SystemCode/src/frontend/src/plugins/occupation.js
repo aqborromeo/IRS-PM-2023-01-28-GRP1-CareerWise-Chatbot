@@ -98,6 +98,22 @@ const colors = [
   "#6b6a89",
 ];
 
+const jobZoneRequirements = {
+  1: "High School Certificate",
+  2: "High School Certificate",
+  3: "Vocational School Certificate",
+  4: "Bachelor's Degree",
+  5: "Master's or Doctoral Degree",
+};
+
+const displayRequirements = (jobZone) => {
+  if (jobZone && jobZone > 3) {
+    const label = jobZoneRequirements[jobZone];
+    return label ? `Requires ${label}` : "";
+  }
+  return "";
+};
+
 const getColor = (i) => {
   return i >= 1 && i <= 12 ? colors[i + 1] : colors[0];
 };
@@ -157,17 +173,27 @@ export const careerPathsToSankey = (sourceData) => {
                   experiences[
                     sourceData[c.dataIndex].source.experienceMedian
                   ] || experiences[1];
+                const sourceJobZone = displayRequirements(source?.jobZone);
 
                 const target = sourceData[c.dataIndex].target;
                 const targetExp =
                   experiences[
                     sourceData[c.dataIndex].target.experienceMedian
                   ] || experiences[1];
-                return `${source.title} (${displayExperienceDuration(
-                  sourceExp
-                )})  →  ${target.title} (${displayExperienceDuration(
-                  targetExp
-                )})`;
+                const targetJobZone = displayRequirements(target?.jobZone);
+                return [
+                  source.title,
+                  `- ${displayExperienceDuration(sourceExp)}`,
+                  sourceJobZone
+                    ? `- ${displayRequirements(source?.jobZone)}`
+                    : "",
+                  "",
+                  target.title,
+                  `- ${displayExperienceDuration(targetExp)}`,
+                  targetJobZone
+                    ? `- ${displayRequirements(target?.jobZone)}`
+                    : "",
+                ];
               },
             },
           },
