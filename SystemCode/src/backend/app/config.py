@@ -19,7 +19,8 @@ class BaseConfig(object):
     # RESULT_BACKEND = environ.get('RESULT_BACKEND')
 
     # Database
-    SQLALCHEMY_DATABASE_URI = environ.get('SQLALCHEMY_DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = environ.get(
+        'SQLALCHEMY_DATABASE_URI')
 
     # Authentication
     JWT_SECRETKEY = environ.get('BCRYPT_HASH')
@@ -90,7 +91,6 @@ class Staging(BaseConfig):
 class Production(BaseConfig):
     ''' Production config '''
 
-    DEBUG = False
     ENV = 'production'
 
 

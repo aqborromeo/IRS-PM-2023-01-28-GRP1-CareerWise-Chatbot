@@ -14,4 +14,4 @@ DEBUG = False
 SECRET_KEY = environ.get('SECRET_KEY')
 
 # Connect to the database
-SQLALCHEMY_DATABASE_URI = environ.get('SQLALCHEMY_DATABASE_URI')
+SQLALCHEMY_DATABASE_URI = environ.get('SQLALCHEMY_DATABASE_URI', "sqlite://")

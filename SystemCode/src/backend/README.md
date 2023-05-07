@@ -53,7 +53,7 @@ SQLALCHEMY_DATABASE_URI=postgres://username:password@localhost:5432/dbname
 alembic upgrade head
 ```
 
-4. If you're running the API for the first time. Run the seeder to fill the database with preliminary data.
+1. Run the seeder to fill the database with preliminary data.
 
 ```bash
 flask seed run
