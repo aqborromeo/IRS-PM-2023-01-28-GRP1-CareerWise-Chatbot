@@ -16,8 +16,8 @@ from flask_seeder import FlaskSeeder
 
 
 def register_extensions(app):
-    db.init_app(app)\
-        # Seed DB
+    db.init_app(app)
+    # Seed DB
     seeder = FlaskSeeder()
     seeder.init_app(app, db)
 
@@ -25,8 +25,9 @@ def register_extensions(app):
 def create_app():
     load_dotenv()
     APPLICATION_ENV = get_environment()
-    app = Flask(app_config[APPLICATION_ENV].APP_NAME)
-    app.config.from_object(app_config[APPLICATION_ENV])
+    conf = app_config[APPLICATION_ENV]
+    app = Flask(conf.APP_NAME)
+    app.config.from_object(conf)
 
     register_extensions(app)
 

@@ -9,14 +9,17 @@ embeddings_df = pd.read_pickle(path)
 
 # Load model
 model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+# model_path = str(Path(__file__).parent) + '/model'
+# model = SentenceTransformer(model_path)
 
 
 class SimilarityCalculator():
-    def __init__(self, occupations, interest_input, experience_input, context_input, priority='interest_open'):
+    def __init__(self, occupations, interest_input, experience_input, context_input, salary_input, priority='interest_open'):
         self.occupations = occupations
         self.interest_input = interest_input
         self.experience_input = experience_input
         self.context_input = context_input
+        self.salary_input = salary_input
 
         self.priority_weights = {
             'interest': 0.4,
@@ -57,6 +60,19 @@ class SimilarityCalculator():
         data[column_name] = data[columns].agg(calc_distance, axis=1)
         return data[['id', column_name]]
 
+    def calc_salary_z(self, value):
+        if value:
+            # z = (X - Mean) / Standard Deviation
+            return (value - 1434.21) / 730.04
+        else:
+            return 0
+
+    def calc_z_similarity(self, input_vector, column_name='similarity'):
+        data = self.jobs_df.copy()
+        data[column_name] = data['min_salary'].apply(
+            self.calc_salary_z)
+        return data[['id', column_name]]
+
     def get_all_similar(self):
         context_similarity = self.calc_euclidean_similarity(
             self.context_input, 'context_similarity')
@@ -64,18 +80,20 @@ class SimilarityCalculator():
             self.interest_input, 'interest_similarity')
         experience_similarity = self.calc_cosine_similarity(
             self.experience_input, 'experience_similarity')
+        salary_similarity = self.calc_z_similarity(
+            self.salary_input, 'salary_similarity')
 
-        return interest_similarity, experience_similarity, context_similarity
+        return interest_similarity, experience_similarity, context_similarity, salary_similarity
 
     def aggregate_similarity(self, row):
-        return 0.2 * row['context_similarity'] + self.priority_weights['interest'] * row['interest_similarity'] + self.priority_weights['experience'] * row['experience_similarity']
+        return 0.2 * row['context_similarity'] + 0.2 * row['salary_similarity'] + self.priority_weights['interest'] * row['interest_similarity'] + self.priority_weights['experience'] * row['experience_similarity']
 
     def get_recommendation(self, n=30, as_dict=True):
-        interest_similarity, experience_similarity, context_similarity = self.get_all_similar()
+        interest_similarity, experience_similarity, context_similarity, salary_similarity = self.get_all_similar()
         merge_df = interest_similarity.merge(
-            experience_similarity.merge(context_similarity, on='id'), on='id').set_index('id')
+            experience_similarity.merge(context_similarity, on='id'), on='id').merge(salary_similarity, on='id').set_index('id')
         merge_df['score'] = merge_df[['context_similarity', 'interest_similarity',
-                                      'experience_similarity']].agg(self.aggregate_similarity, axis=1)
+                                      'experience_similarity', 'salary_similarity']].agg(self.aggregate_similarity, axis=1)
         merge_df = merge_df.sort_values('score', ascending=False)
         merge_df = merge_df.rename(index={"id": "occupation_id"})
         return merge_df[:n].to_dict(orient='index', index=True) if as_dict else merge_df[:n]

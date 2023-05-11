@@ -17,6 +17,7 @@ class Result(db.Model):
     interest_similarity = db.Column(db.Float)
     experience_similarity = db.Column(db.Float)
     context_similarity = db.Column(db.Float)
+    salary_similarity = db.Column(db.Float)
     score = db.Column(db.Float)
 
     user_rating = db.Column(db.Integer)

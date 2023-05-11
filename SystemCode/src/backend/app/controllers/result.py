@@ -15,6 +15,8 @@ from app.utils.common import map_row
 
 from app.db import db
 
+import re
+import locale
 
 auth = Auth()
 
@@ -34,6 +36,15 @@ def map_result(result):
 
 def map_results(results):
     return rows2dict(results, snake_to_camel=True, row_callback=result_row_callback)
+
+
+def extract_number(text):
+    numbers = re.findall(r'\d+[\.,]?\d*', text)
+    if numbers:
+        locale.setlocale(locale.LC_ALL, '')
+        return locale.atof(numbers[0])
+    else:
+        return None
 
 
 class ResultRatingApi(Resource):
@@ -121,12 +132,17 @@ class ResultsGenerator:
 
         # Get experience text
         experience_input = qna['experience_open'].message_text if qna['experience_open'] else ''
+
         # Get context values
         context_input = self.get_context_values(chats)
 
+        # Get salary text
+        salary_input = qna['salary_minimum'].message_text if qna['salary_minimum'] else ''
+        salary_input = extract_number(salary_input)
+
         # Calculate similarity score
         calculator = SimilarityCalculator(
-            occupations, interest_input, experience_input, context_input)
+            occupations, interest_input, experience_input, context_input, salary_input)
 
         recommendations = calculator.get_recommendation()
 
