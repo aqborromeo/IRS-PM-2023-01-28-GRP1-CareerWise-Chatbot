@@ -10,6 +10,9 @@ from .career_path import CareerPath
 from .ssoc_job import SsocJob
 from .program import Program
 from .program_trend import ProgramTrend
+from .cip import Cip
+from .cip_program import CipProgram
+from .cip_occupation import CipOccupation
 
 
 target_metadata = [
@@ -24,5 +27,8 @@ target_metadata = [
     CareerPath.metadata,
     SsocJob.metadata,
     Program.metadata,
-    ProgramTrend.metadata
+    ProgramTrend.metadata,
+    Cip.metadata,
+    CipProgram.metadata,
+    CipOccupation.metadata,
 ]

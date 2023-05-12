@@ -56,6 +56,42 @@
             </CollapsePanel>
           </Collapse>
         </div>
+
+        <div
+          class="resultDetail__item-section"
+          v-if="
+            occupation &&
+            occupation.careerPaths &&
+            occupation.careerPaths.length
+          "
+        >
+          <Collapse :bordered="false" :defaultActiveKey="['program']">
+            <CollapsePanel key="program" :header="'Education Programs'">
+              <List
+                size="small"
+                :data-source="programs"
+                item-layout="horizontal"
+              >
+                <template #renderItem="{ item }">
+                  <ListItem>
+                    <ListItemMeta
+                      :style="{
+                        textAlign: 'left',
+                      }"
+                      :description="`${item.university}  | ${item.school}`"
+                    >
+                      <template #title>
+                        <a href="#">{{ item.degree }}</a>
+                      </template>
+                    </ListItemMeta>
+
+                    <div><LineChart :data="item.programTrends" /></div>
+                  </ListItem>
+                </template>
+              </List>
+            </CollapsePanel>
+          </Collapse>
+        </div>
       </div>
     </div>
   </div>
@@ -64,7 +100,16 @@
 <script setup>
 import { computed, defineProps } from "vue";
 import { CloseOutlined } from "@ant-design/icons-vue";
-import { Collapse, CollapsePanel, Button, Table } from "ant-design-vue";
+import {
+  Collapse,
+  CollapsePanel,
+  Button,
+  Table,
+  List,
+  ListItem,
+  ListItemMeta,
+} from "ant-design-vue";
+import LineChart from "@/components/library/LineChart/LineChart.vue";
 import SankeyDiagram from "@/components/library/SankeyDiagram/SankeyDiagram.vue";
 
 const props = defineProps({
@@ -94,12 +139,14 @@ const displaySalary = (salary) => {
 };
 
 const ssocJobs = computed(() => {
-  return props.occupation.ssocJobs.map((d) => ({
-    ...d,
-    minSalary: displaySalary(d.minSalary),
-    maxSalary: displaySalary(d.minSalary),
-    key: d.id,
-  }));
+  return props.occupation.ssocJobs
+    .map((d) => ({
+      ...d,
+      minSalaryDisplay: displaySalary(d.minSalary),
+      maxSalaryDisplay: displaySalary(d.minSalary),
+      key: d.id,
+    }))
+    .sort((a, b) => b.minSalary - a.minSalary);
 });
 
 const ssocJobsColumns = [
@@ -115,15 +162,25 @@ const ssocJobsColumns = [
   },
   {
     title: "Min. Salary",
-    dataIndex: "minSalary",
-    key: "minSalary",
+    dataIndex: "minSalaryDisplay",
+    key: "minSalaryDisplay",
   },
   {
     title: "Max. Salary",
-    dataIndex: "maxSalary",
-    key: "maxSalary",
+    dataIndex: "maxSalaryDisplay",
+    key: "maxSalaryDisplay",
   },
 ];
+
+const programs = computed(() => {
+  return props.occupation.programs.map((d) => ({
+    ...d,
+    programTrends: d.programTrends
+      ? d.programTrends.sort((a, b) => a.year - b.year)
+      : null,
+    key: d.id,
+  }));
+});
 </script>
 
 <style scoped>
