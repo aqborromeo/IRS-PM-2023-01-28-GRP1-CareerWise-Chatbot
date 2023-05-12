@@ -39,24 +39,23 @@ onMounted(() => {
           labels: props.data.map((row) => row.year),
           datasets,
         },
-        // options: {
-        //   scales: {
-        //     x: [
-        //       {
-        //         gridLines: {
-        //           color: "rgba(0, 0, 0, 0)",
-        //         },
-        //       },
-        //     ],
-        //     y: [
-        //       {
-        //         gridLines: {
-        //           color: "rgba(0, 0, 0, 0)",
-        //         },
-        //       },
-        //     ],
-        //   },
-        // },
+        options: {
+          legend: {
+            display: false,
+          },
+          scales: {
+            xAxes: [
+              {
+                display: false,
+              },
+            ],
+            yAxes: [
+              {
+                display: false,
+              },
+            ],
+          },
+        },
       });
     }
   }
