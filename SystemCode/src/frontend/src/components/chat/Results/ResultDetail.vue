@@ -20,7 +20,7 @@
         </div>
 
         <div class="resultDetail__item-section">
-          <Collapse :bordered="false">
+          <Collapse>
             <CollapsePanel key="task" :header="'Work Tasks'">
               <ul class="resultDetail__item-ul">
                 <li v-for="task in splitTasks" :key="task">
@@ -35,7 +35,7 @@
           class="resultDetail__item-section"
           v-if="occupation && occupation.ssocJobs && occupation.ssocJobs.length"
         >
-          <Collapse :bordered="false">
+          <Collapse>
             <CollapsePanel key="salary" :header="'Job Titles & Salary'">
               <Table :dataSource="ssocJobs" :columns="ssocJobsColumns"></Table>
             </CollapsePanel>
@@ -50,7 +50,7 @@
             occupation.careerPaths.length
           "
         >
-          <Collapse :bordered="false" :defaultActiveKey="['path']">
+          <Collapse :defaultActiveKey="['path']">
             <CollapsePanel key="path" :header="'Career Paths'">
               <SankeyDiagram :currentItem="occupation" />
             </CollapsePanel>
@@ -65,7 +65,7 @@
             occupation.careerPaths.length
           "
         >
-          <Collapse :bordered="false" :defaultActiveKey="['program']">
+          <Collapse :defaultActiveKey="['program']">
             <CollapsePanel key="program" :header="'Education Programs'">
               <List
                 size="small"
@@ -77,15 +77,20 @@
                     <ListItemMeta
                       :style="{
                         textAlign: 'left',
+                        margin: '0 2rem 0 0',
                       }"
-                      :description="`${item.university}  | ${item.school}`"
                     >
                       <template #title>
                         <a href="#">{{ item.degree }}</a>
                       </template>
+                      <template #description>
+                        <ResultEducationDescription :item="item" />
+                      </template>
                     </ListItemMeta>
 
-                    <div><LineChart :data="item.programTrends" /></div>
+                    <div style="min-width: 10%; max-width: 40%">
+                      <LineChart :data="item.programTrends" />
+                    </div>
                   </ListItem>
                 </template>
               </List>
@@ -111,6 +116,7 @@ import {
 } from "ant-design-vue";
 import LineChart from "@/components/library/LineChart/LineChart.vue";
 import SankeyDiagram from "@/components/library/SankeyDiagram/SankeyDiagram.vue";
+import ResultEducationDescription from "@/components/chat/Results/ResultEducationDescription.vue";
 
 const props = defineProps({
   occupation: {
@@ -135,7 +141,7 @@ const splitTasks = computed(() => {
 });
 
 const displaySalary = (salary) => {
-  return salary ? `SGD ${salary.toLocaleString()}` : "-";
+  return salary ? `$${salary.toLocaleString()}` : "-";
 };
 
 const ssocJobs = computed(() => {
@@ -172,14 +178,26 @@ const ssocJobsColumns = [
   },
 ];
 
+const getLatestTrend = (programTrends) => {
+  return programTrends?.length
+    ? programTrends[programTrends?.length - 1]
+    : null;
+};
+
 const programs = computed(() => {
-  return props.occupation.programs.map((d) => ({
-    ...d,
-    programTrends: d.programTrends
-      ? d.programTrends.sort((a, b) => a.year - b.year)
-      : null,
-    key: d.id,
-  }));
+  return props.occupation.programs
+    .map((d) => ({
+      ...d,
+      programTrends: d.programTrends
+        ? d.programTrends.sort((a, b) => a.year - b.year)
+        : null,
+      key: d.id,
+    }))
+    .sort((a, b) => {
+      const aParams = getLatestTrend(a.programTrends);
+      const bParams = getLatestTrend(b.programTrends);
+      return bParams?.grossMonthlyMedian - aParams?.grossMonthlyMedian;
+    });
 });
 </script>
 
@@ -250,6 +268,7 @@ const programs = computed(() => {
 
 .resultDetail__item-description {
   width: 100%;
+  padding: 2rem 0;
 }
 
 .resultDetail__item-infos {

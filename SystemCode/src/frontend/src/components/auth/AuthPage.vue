@@ -71,7 +71,12 @@ export default {
   justify-content: center;
   margin: 0 auto;
   padding: 5rem;
-  background: url("@/assets/images/pattern.png") center;
+  background-image: linear-gradient(
+    140deg,
+    #fafa6e 0%,
+    #d36088 50%,
+    #8962a6 75%
+  );
 }
 
 .auth-card {

@@ -3,8 +3,10 @@
 </template>
 
 <script setup>
-import { ref, defineProps, onMounted } from "vue";
+import { ref, defineProps, onMounted, onUnmounted } from "vue";
 import { Chart } from "chart.js";
+
+import { getGradient, getMinTick, getMaxTick } from "@/plugins/occupation.js";
 
 const props = defineProps({
   data: {
@@ -17,47 +19,126 @@ const props = defineProps({
 
 const container = ref(null);
 
-onMounted(() => {
-  debugger;
-  if (props.data && props.data.length) {
-    const values = props.data
-      .map((item) => {
-        return item.grossMonthlyMedian;
-      })
-      .filter((item) => item);
-    const datasets = [
-      {
-        label: "Median monthly salary",
-        data: values,
-      },
-    ];
+const chartInstance = ref(null);
 
-    if (values && values.length) {
-      new Chart(container.value, {
+onMounted(() => {
+  if (props.data && props.data.length && container.value) {
+    const yKey = "grossMonthlyMedian";
+    const xKey = "year";
+
+    const processedData = props.data
+      .filter((item) => item[yKey])
+      .sort((item1, item2) => item1[xKey] - item2[xKey])
+      .map((item) => {
+        return {
+          x: item[xKey],
+          y: item[yKey],
+        };
+      });
+
+    if (processedData && processedData.length) {
+      const dataY = processedData.map((item) => {
+        return item.y;
+      });
+
+      const dataX = processedData.map((item) => {
+        return item.x;
+      });
+      const minMaxY = [Math.min(...dataY), Math.max(...dataY)];
+      const minMaxX = [Math.min(...dataX), Math.max(...dataX)];
+
+      const datasets = [
+        {
+          label: "Median monthly salary",
+          data: processedData,
+          borderColor: function (context) {
+            const chart = context.chart;
+            const { ctx, chartArea } = chart;
+
+            if (!chartArea) {
+              return;
+            }
+            return getGradient(ctx, chartArea);
+          },
+        },
+      ];
+
+      chartInstance.value = new Chart(container.value, {
         type: "line",
         data: {
-          labels: props.data.map((row) => row.year),
+          labels: dataX,
           datasets,
         },
         options: {
-          legend: {
-            display: false,
+          layout: {
+            autoPadding: true,
+          },
+          plugins: {
+            legend: {
+              display: false,
+              labels: {
+                usePointStyle: false,
+              },
+            },
           },
           scales: {
-            xAxes: [
-              {
+            x: {
+              grid: {
                 display: false,
               },
-            ],
-            yAxes: [
-              {
+              border: {
                 display: false,
               },
-            ],
+              ticks: {
+                major: {
+                  enabled: false,
+                },
+                backdropPadding: {
+                  x: 10,
+                  y: 10,
+                },
+                callback(value, index, values) {
+                  return index === 0
+                    ? minMaxX[0]
+                    : index === values.length - 1
+                    ? minMaxX[1]
+                    : null;
+                },
+              },
+            },
+            y: {
+              grid: {
+                display: false,
+              },
+              border: {
+                display: false,
+              },
+              min: getMinTick(minMaxY[0]),
+              max: getMaxTick(minMaxY[1]),
+              ticks: {
+                major: {
+                  enabled: true,
+                },
+                maxTicksLimit: 2,
+                backdropPadding: {
+                  x: 10,
+                  y: 10,
+                },
+                callback(value, index, values) {
+                  return "$" + value.toLocaleString();
+                },
+              },
+            },
           },
         },
       });
     }
+  }
+});
+
+onUnmounted(() => {
+  if (chartInstance.value) {
+    chartInstance.value.destroy();
   }
 });
 </script>
