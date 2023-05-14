@@ -10,11 +10,15 @@
       <div>
         <p v-if="mode === 'login'">
           Haven't registered for an account?
-          <Button :outline="true" @click="toggleMode">Create one now</Button>
+          <Button :outline="true" @click="toggleMode" type="link"
+            >Create one now</Button
+          >
         </p>
         <p v-else>
           Have an account?
-          <Button :outline="true" @click="toggleMode">Log in now</Button>
+          <Button :outline="true" @click="toggleMode" type="link"
+            >Log in now</Button
+          >
         </p>
       </div>
     </Card>

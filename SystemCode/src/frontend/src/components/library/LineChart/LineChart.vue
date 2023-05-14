@@ -97,7 +97,7 @@ onMounted(() => {
                   x: 10,
                   y: 10,
                 },
-                callback(value, index, values) {
+                callback(_, index, values) {
                   return index === 0
                     ? minMaxX[0]
                     : index === values.length - 1
@@ -124,7 +124,7 @@ onMounted(() => {
                   x: 10,
                   y: 10,
                 },
-                callback(value, index, values) {
+                callback(value) {
                   return "$" + value.toLocaleString();
                 },
               },
