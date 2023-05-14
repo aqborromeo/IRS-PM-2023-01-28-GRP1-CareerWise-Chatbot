@@ -20,7 +20,8 @@ class BaseConfig(object):
 
     # Database
     SQLALCHEMY_DATABASE_URI = environ.get(
-        'SQLALCHEMY_DATABASE_URI')
+        'SQLALCHEMY_DATABASE_URI', 'sqlite:///' + path.join(basedir, 'database.db'))
+    IS_SQLITE = 'sqlite:///' in SQLALCHEMY_DATABASE_URI
 
     # Authentication
     JWT_SECRETKEY = environ.get('BCRYPT_HASH')

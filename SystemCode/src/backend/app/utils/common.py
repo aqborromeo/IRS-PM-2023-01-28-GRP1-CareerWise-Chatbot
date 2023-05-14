@@ -1,4 +1,12 @@
 import re
+from os import environ
+from app.config import config as app_config
+
+
+def get_db_now_func():
+    APPLICATION_ENV = environ.get('APPLICATION_ENV') or 'development'
+    env_app_config = app_config[APPLICATION_ENV]
+    return 'CURRENT_TIMESTAMP' if env_app_config.IS_SQLITE else get_db_now_func()
 
 
 def convert_snake_to_camel(string: str):

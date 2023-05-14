@@ -3,6 +3,10 @@
 env
 venv
 .env
+.env.testing
 .venv
 
 .DS_Store
+
+# SQLite database
+database.db

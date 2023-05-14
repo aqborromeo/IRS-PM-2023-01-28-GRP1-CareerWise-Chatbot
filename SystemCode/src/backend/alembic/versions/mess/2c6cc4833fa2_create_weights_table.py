@@ -7,6 +7,7 @@ Create Date: 2023-04-05 23:01:45.389462
 """
 from alembic import op
 import sqlalchemy as sa
+from app.utils.common import get_db_now_func
 
 
 # revision identifiers, used by Alembic.
@@ -23,8 +24,8 @@ def upgrade() -> None:
     sa.Column('question_id', sa.Integer(), nullable=True),
     sa.Column('weight_value', sa.Float(), nullable=True),
     sa.Column('variable', sa.String(), nullable=True),
-    sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=True),
-    sa.Column('updated_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=True),
+    sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text(get_db_now_func()), nullable=True),
+    sa.Column('updated_at', sa.DateTime(timezone=True), server_default=sa.text(get_db_now_func()), nullable=True),
     sa.ForeignKeyConstraint(['question_id'], ['questions.id'], ),
     sa.PrimaryKeyConstraint('id')
     )

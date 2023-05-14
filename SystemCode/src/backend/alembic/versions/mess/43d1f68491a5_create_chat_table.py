@@ -7,6 +7,7 @@ Create Date: 2023-04-05 20:39:50.175582
 """
 from alembic import op
 import sqlalchemy as sa
+from app.utils.common import get_db_now_func
 
 
 # revision identifiers, used by Alembic.
@@ -27,9 +28,9 @@ def upgrade() -> None:
                     sa.Column('status', sa.Enum('start', 'in_progress', 'ready',
                                                 'complete', 'cancelled', name='status'), nullable=False),
                     sa.Column('created_at', sa.DateTime(timezone=True),
-                              server_default=sa.text('now()'), nullable=True),
+                              server_default=sa.text(get_db_now_func()), nullable=True),
                     sa.Column('updated_at', sa.DateTime(timezone=True),
-                              server_default=sa.text('now()'), nullable=True),
+                              server_default=sa.text(get_db_now_func()), nullable=True),
                     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
                     sa.PrimaryKeyConstraint('id')
                     )
@@ -42,15 +43,19 @@ def upgrade() -> None:
                     sa.Column('message_text', sa.String(), nullable=True),
                     sa.Column('created_by', sa.Enum('user', 'bot',
                                                     name='createdby'), nullable=False),
+                    sa.Column(
+                        'question_id', sa.Integer(), nullable=True),
+                    sa.Column('option_id', sa.Integer(), nullable=True),
                     sa.Column('created_at', sa.DateTime(timezone=True),
-                              server_default=sa.text('now()'), nullable=True),
+                              server_default=sa.text(get_db_now_func()), nullable=True),
                     sa.Column('updated_at', sa.DateTime(timezone=True),
-                              server_default=sa.text('now()'), nullable=True),
+                              server_default=sa.text(get_db_now_func()), nullable=True),
                     sa.ForeignKeyConstraint(['chat_session_id'], [
-                                            'chat_sessions.id'], ),
+                        'chat_sessions.id'], ),
                     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
                     sa.PrimaryKeyConstraint('id')
                     )
+    op.create_foreign_key(None, 'chats', 'options', ['option_id'], ['id'])
     # ### end Alembic commands ###
 
 
@@ -59,4 +64,5 @@ def downgrade() -> None:
     op.drop_table('chats')
     op.drop_index(op.f('ix_chat_sessions_user_id'), table_name='chat_sessions')
     op.drop_table('chat_sessions')
+    op.drop_constraint(None, 'chats', type_='foreignkey')
     # ### end Alembic commands ###

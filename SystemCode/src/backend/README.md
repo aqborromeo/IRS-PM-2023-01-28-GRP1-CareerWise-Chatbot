@@ -30,7 +30,28 @@ $ poetry env use [app-env-name-python3.10]
 ```
 
 4. Alternatively, on Visual Studio Code, install the Python Environment Manager, which allows you to switch to the `upskill-backend` environment.
-5. Run the app with:
+
+5. Create a copy of `.env.example` and rename the copied file to `.env`.
+
+```shell
+$ cp .env.example .env
+```
+
+6. [Optional] Uncomment and change the `SQLALCHEMY_DATABASE_URI` value in the `.env` file to your desired PostgreSQL database connection string, if you already have one. Otherwise, leave it commented and the app will set up an SQLite database.
+
+7. Migrate the tables with the following command:
+
+```shell
+$ alembic upgrade head
+```
+
+8. Seed the tables with the following command:
+
+```shell
+$ flask seed run
+```
+
+1. Run the app with:
 
 ```shell
 $ flask run
@@ -38,7 +59,9 @@ $ flask run
 
 6. Navigate to [http://localhost:5000](http://localhost:5000)
 
-### Database and Migrations
+## For Developers
+
+### Database and Migrations on PostgreSQL
 
 1. You must set up a PostgreSQL database before you can migrate.
 2. Assign the PostgreSQL connection string to the environment variable `SQLALCHEMY_DATABASE_URI`. This variable should be in the `.env` file.
@@ -75,8 +98,6 @@ alembic revision --autogenerate -m "Add ____ table"
 ```bash
 alembic upgrade head
 ```
-
-## Useful poetry notes
 
 ## Useful poetry notes
 
