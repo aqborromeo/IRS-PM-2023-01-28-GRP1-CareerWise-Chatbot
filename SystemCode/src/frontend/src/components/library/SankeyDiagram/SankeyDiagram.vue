@@ -30,12 +30,14 @@ const buildData = (data) => {
 };
 
 onMounted(() => {
-  const configs = buildData(props.currentItem?.careerPaths);
+  if (sankeyDiagram.value) {
+    const configs = buildData(props.currentItem?.careerPaths);
 
-  chartInstance.value = new Chart(sankeyDiagram.value, {
-    type: "sankey",
-    ...configs,
-  });
+    chartInstance.value = new Chart(sankeyDiagram.value, {
+      type: "sankey",
+      ...configs,
+    });
+  }
 });
 
 onUnmounted(() => {

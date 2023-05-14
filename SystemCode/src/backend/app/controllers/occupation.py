@@ -27,6 +27,22 @@ def map_career_path(career_path):
     }
 
 
+def map_programs(cip_occupations):
+    programs_dict = {}
+    programs = []
+    if cip_occupations:
+        for cip_occupation in cip_occupations:
+            for cip_program in cip_occupation.cip.cip_programs:
+                program = cip_program.program
+                if str(program.id) not in programs_dict:
+                    programs_dict[str(program.id)] = 1
+                    program_dict = map_row(program)
+                    program_dict['programTrends'] = list(map(
+                        map_row, program.program_trends))
+                    programs.append(program_dict)
+    return programs
+
+
 class OccupationsApi(Resource):
     @auth.middleware
     def get(token_data, self):
@@ -53,6 +69,10 @@ class OccupationApi(Resource):
             SsocJob.occupation_id == id).all()
         ssoc_jobs_dict = list(map(map_row, ssoc_jobs))
         occupation_dict["ssocJobs"] = ssoc_jobs_dict
+
+        # Educational Programs
+        programs = map_programs(occupation.cip_occupations)
+        occupation_dict["programs"] = programs
 
         return jsonify(occupation_dict)
 

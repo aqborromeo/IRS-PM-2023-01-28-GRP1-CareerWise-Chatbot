@@ -202,3 +202,33 @@ export const careerPathsToSankey = (sourceData) => {
     };
   }
 };
+
+// Chart color
+const firstColor = colors[0];
+const lastColor = colors[colors.length - 1];
+const middleColor = colors[colors.length - parseInt(colors.length / 2)];
+
+export function getGradient(ctx, chartArea) {
+  let width, height, gradient;
+  const chartWidth = chartArea.right - chartArea.left;
+  const chartHeight = chartArea.bottom - chartArea.top;
+  if (!gradient || width !== chartWidth || height !== chartHeight) {
+    width = chartWidth;
+    height = chartHeight;
+    gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+    gradient.addColorStop(0, firstColor);
+    gradient.addColorStop(0.5, middleColor);
+    gradient.addColorStop(1, lastColor);
+  }
+
+  return gradient;
+}
+
+export const getMinTick = (min) => {
+  const val = min - Number(0.05 * min.toPrecision(2));
+  return val < 0 ? 0 : val;
+};
+
+export const getMaxTick = (max) => {
+  return max + Number(0.05 * max.toPrecision(2));
+};

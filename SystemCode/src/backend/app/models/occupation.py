@@ -3,6 +3,8 @@ from sqlalchemy.orm import relationship
 from dataclasses import dataclass
 from app.db import db
 
+from app.models.cip_occupation import CipOccupation
+
 
 @dataclass
 class Occupation(db.Model):
@@ -37,6 +39,10 @@ class Occupation(db.Model):
     max_salary = db.Column(db.Float)
 
     ssoc_jobs = relationship("SsocJob", back_populates="occupation")
+
+    # Educational programs
+    cip_occupations = relationship(
+        'CipOccupation', back_populates='occupation')
 
     created_at = db.Column(db.DateTime(timezone=True),
                            server_default=func.now())

@@ -39,6 +39,7 @@ class SsocJobSeeder(Seeder):
             print(f"Add {str(len(insert_items))} {self.label}")
             self.db.session.commit()
 
+        if data.keys():
             # Purge non-existent items
             delete_statement = delete(self.Model).where(
                 self.Model.id.not_in(data_ids))

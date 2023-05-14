@@ -20,7 +20,7 @@
         </div>
 
         <div class="resultDetail__item-section">
-          <Collapse :bordered="false">
+          <Collapse>
             <CollapsePanel key="task" :header="'Work Tasks'">
               <ul class="resultDetail__item-ul">
                 <li v-for="task in splitTasks" :key="task">
@@ -35,7 +35,7 @@
           class="resultDetail__item-section"
           v-if="occupation && occupation.ssocJobs && occupation.ssocJobs.length"
         >
-          <Collapse :bordered="false">
+          <Collapse>
             <CollapsePanel key="salary" :header="'Job Titles & Salary'">
               <Table :dataSource="ssocJobs" :columns="ssocJobsColumns"></Table>
             </CollapsePanel>
@@ -50,9 +50,50 @@
             occupation.careerPaths.length
           "
         >
-          <Collapse :bordered="false" :defaultActiveKey="['path']">
+          <Collapse :defaultActiveKey="['path']">
             <CollapsePanel key="path" :header="'Career Paths'">
               <SankeyDiagram :currentItem="occupation" />
+            </CollapsePanel>
+          </Collapse>
+        </div>
+
+        <div
+          class="resultDetail__item-section"
+          v-if="
+            occupation &&
+            occupation.careerPaths &&
+            occupation.careerPaths.length
+          "
+        >
+          <Collapse :defaultActiveKey="['program']">
+            <CollapsePanel key="program" :header="'Education Programs'">
+              <List
+                size="small"
+                :data-source="programs"
+                item-layout="horizontal"
+              >
+                <template #renderItem="{ item }">
+                  <ListItem>
+                    <ListItemMeta
+                      :style="{
+                        textAlign: 'left',
+                        margin: '0 2rem 0 0',
+                      }"
+                    >
+                      <template #title>
+                        <a href="#">{{ item.degree }}</a>
+                      </template>
+                      <template #description>
+                        <ResultEducationDescription :item="item" />
+                      </template>
+                    </ListItemMeta>
+
+                    <div style="min-width: 10%; max-width: 40%">
+                      <LineChart :data="item.programTrends" />
+                    </div>
+                  </ListItem>
+                </template>
+              </List>
             </CollapsePanel>
           </Collapse>
         </div>
@@ -64,8 +105,18 @@
 <script setup>
 import { computed, defineProps } from "vue";
 import { CloseOutlined } from "@ant-design/icons-vue";
-import { Collapse, CollapsePanel, Button, Table } from "ant-design-vue";
+import {
+  Collapse,
+  CollapsePanel,
+  Button,
+  Table,
+  List,
+  ListItem,
+  ListItemMeta,
+} from "ant-design-vue";
+import LineChart from "@/components/library/LineChart/LineChart.vue";
 import SankeyDiagram from "@/components/library/SankeyDiagram/SankeyDiagram.vue";
+import ResultEducationDescription from "@/components/chat/Results/ResultEducationDescription.vue";
 
 const props = defineProps({
   occupation: {
@@ -90,16 +141,18 @@ const splitTasks = computed(() => {
 });
 
 const displaySalary = (salary) => {
-  return salary ? `SGD ${salary.toLocaleString()}` : "-";
+  return salary ? `$${salary.toLocaleString()}` : "-";
 };
 
 const ssocJobs = computed(() => {
-  return props.occupation.ssocJobs.map((d) => ({
-    ...d,
-    minSalary: displaySalary(d.minSalary),
-    maxSalary: displaySalary(d.minSalary),
-    key: d.id,
-  }));
+  return props.occupation.ssocJobs
+    .map((d) => ({
+      ...d,
+      minSalaryDisplay: displaySalary(d.minSalary),
+      maxSalaryDisplay: displaySalary(d.minSalary),
+      key: d.id,
+    }))
+    .sort((a, b) => b.minSalary - a.minSalary);
 });
 
 const ssocJobsColumns = [
@@ -115,15 +168,37 @@ const ssocJobsColumns = [
   },
   {
     title: "Min. Salary",
-    dataIndex: "minSalary",
-    key: "minSalary",
+    dataIndex: "minSalaryDisplay",
+    key: "minSalaryDisplay",
   },
   {
     title: "Max. Salary",
-    dataIndex: "maxSalary",
-    key: "maxSalary",
+    dataIndex: "maxSalaryDisplay",
+    key: "maxSalaryDisplay",
   },
 ];
+
+const getLatestTrend = (programTrends) => {
+  return programTrends?.length
+    ? programTrends[programTrends?.length - 1]
+    : null;
+};
+
+const programs = computed(() => {
+  return props.occupation.programs
+    .map((d) => ({
+      ...d,
+      programTrends: d.programTrends
+        ? d.programTrends.sort((a, b) => a.year - b.year)
+        : null,
+      key: d.id,
+    }))
+    .sort((a, b) => {
+      const aParams = getLatestTrend(a.programTrends);
+      const bParams = getLatestTrend(b.programTrends);
+      return bParams?.grossMonthlyMedian - aParams?.grossMonthlyMedian;
+    });
+});
 </script>
 
 <style scoped>
@@ -193,6 +268,7 @@ const ssocJobsColumns = [
 
 .resultDetail__item-description {
   width: 100%;
+  padding: 2rem 0;
 }
 
 .resultDetail__item-infos {
