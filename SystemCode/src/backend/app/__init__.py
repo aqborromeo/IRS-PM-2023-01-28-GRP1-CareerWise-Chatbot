@@ -2,7 +2,7 @@ import logging
 from os import environ
 from dotenv import load_dotenv
 
-from flask import Flask, request as req
+from flask import Flask, request as req, render_template, send_from_directory
 from flask_restful import Api
 from flask_cors import CORS, cross_origin
 
@@ -13,6 +13,16 @@ from app.errors import errors
 from app.db import db
 
 from flask_seeder import FlaskSeeder
+
+
+def register_paths(app):
+    @app.route("/")
+    def index():
+        return send_from_directory("static", "index.html")
+
+    @app.route("/<path:path>")
+    def files(path):
+        return send_from_directory("static", path)
 
 
 def register_extensions(app):
@@ -28,6 +38,8 @@ def create_app():
     conf = app_config[APPLICATION_ENV]
     app = Flask(conf.APP_NAME)
     app.config.from_object(conf)
+
+    register_paths(app)
 
     register_extensions(app)
 

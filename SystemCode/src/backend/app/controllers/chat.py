@@ -56,6 +56,7 @@ class ChatsApi(Resource):
                 'userId'], Chat.created_by == CreatedBy.bot
         ).order_by(desc('created_at')).first()
 
+        # if question is MCQ (i.e. has question.options), fill in the option ID of answer selected by user
         question_options = last_question_chat.question.options if last_question_chat and last_question_chat.question else False
         option_id = request.json.get('option_id')
 
@@ -139,7 +140,7 @@ class ReplyGenerator:
         self.chat_session = chat_session
         self.last_question_chat = last_question_chat
         self.prompts = ["Interesting. Could you tell me more?",
-                        "Great. Tell me more.", "Interesting. Do you have anything to add?"]
+                        "Great. Tell me more.", "Interesting. Do you have anything more to add?"]
 
     def get_first_unasked_question(self):
         chats_subquery = db.session.query(Chat.id, Chat.question_id).filter(
@@ -153,12 +154,36 @@ class ReplyGenerator:
             asc(query.c.order)).first()
         return question
 
+    def get_total_length(self):
+        if self.user_chat and self.user_chat.question and self.user_chat.question.min_response_length and self.user_chat.created_by == CreatedBy.user and self.chat_session.chats:
+            total_length = 0
+            total_answers = 0
+            for chat in self.chat_session.chats:
+                if chat.question_id == self.user_chat.question_id and chat.created_by == CreatedBy.user:
+                    total_length += len(chat.message_text)
+                    total_answers += 1
+            return total_length, total_answers
+        return None, None
+
     def get_reply(self):
         # Handle open ended
-        # TODO: prompt users to provide longer responses for open ended questions
-        prompt = random.choice(self.prompts)
+        prompt = None
+        if self.user_chat.question and self.user_chat.question.min_response_length:
+            total_length, total_answers = self.get_total_length()
+            is_complete = total_length >= self.user_chat.question.min_response_length if total_length else False
+            if not is_complete and total_answers >= 3:
+                is_complete = True
+            prompt = random.choice(self.prompts) if not is_complete else None
 
-        # Handle MCQs
+            # Stay with current question
+            if prompt:
+                return {
+                    "question_id": self.user_chat.question_id,
+                    'message_text': prompt,
+                    'options': None
+                }
+
+        # Handle subsequent questions
         first_unasked_question = self.get_first_unasked_question()
 
         if first_unasked_question:
