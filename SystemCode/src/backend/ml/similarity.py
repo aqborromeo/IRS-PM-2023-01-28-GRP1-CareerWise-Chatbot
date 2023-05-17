@@ -60,17 +60,24 @@ class SimilarityCalculator():
         data[column_name] = data[columns].agg(calc_distance, axis=1)
         return data[['id', column_name]]
 
-    def calc_salary_z(self, value):
-        if value:
-            # z = (X - Mean) / Standard Deviation
-            return (value - 1434.21) / 730.04
+    def calc_salary_penalty(self, value, input):
+        if value and input:
+            # z = adjusted by Standard Deviations
+            diff = (value - input) / 730.0
+
+            if diff > 0:
+                return 0
+            elif diff < -1:
+                return -1
+            else:
+                return diff
         else:
             return 0
 
-    def calc_z_similarity(self, input_vector, column_name='similarity'):
+    def calc_salary_penalties(self, input, column_name='similarity'):
         data = self.jobs_df.copy()
         data[column_name] = data['min_salary'].apply(
-            self.calc_salary_z)
+            lambda x: self.calc_salary_penalty(x, input))
         return data[['id', column_name]]
 
     def get_all_similar(self):
@@ -80,13 +87,13 @@ class SimilarityCalculator():
             self.interest_input, 'interest_similarity')
         experience_similarity = self.calc_cosine_similarity(
             self.experience_input, 'experience_similarity')
-        salary_similarity = self.calc_z_similarity(
+        salary_similarity = self.calc_salary_penalties(
             self.salary_input, 'salary_similarity')
 
         return interest_similarity, experience_similarity, context_similarity, salary_similarity
 
     def aggregate_similarity(self, row):
-        return 0.2 * row['context_similarity'] + 0.2 * row['salary_similarity'] + self.priority_weights['interest'] * row['interest_similarity'] + self.priority_weights['experience'] * row['experience_similarity']
+        return 0.1 * row['context_similarity'] + 0.1 * row['salary_similarity'] + self.priority_weights['interest'] * row['interest_similarity'] + self.priority_weights['experience'] * row['experience_similarity']
 
     def get_recommendation(self, n=30, as_dict=True):
         interest_similarity, experience_similarity, context_similarity, salary_similarity = self.get_all_similar()

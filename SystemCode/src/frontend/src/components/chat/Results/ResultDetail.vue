@@ -35,9 +35,40 @@
           class="resultDetail__item-section"
           v-if="occupation && occupation.ssocJobs && occupation.ssocJobs.length"
         >
-          <Collapse>
+          <Collapse :defaultActiveKey="['salary']">
             <CollapsePanel key="salary" :header="'Job Titles & Salary'">
-              <Table :dataSource="ssocJobs" :columns="ssocJobsColumns"></Table>
+              <div v-if="occupation.minSalary && occupation.maxSalary">
+                Salaries range from
+                <strong style="font-size: 130%"
+                  >${{ occupation.minSalary.toLocaleString() }}</strong
+                >
+                to
+                <strong style="font-size: 130%"
+                  >${{ occupation.maxSalary.toLocaleString() }}</strong
+                >&nbsp;
+                <em
+                  ><a href="https://www.mycareersfuture.gov.sg/" target="_blank"
+                    >(MyCareersFuture)</a
+                  ></em
+                >
+              </div>
+              <Table
+                :dataSource="ssocJobs"
+                :columns="ssocJobsColumns"
+                :pagination="{ pageSize: 5 }"
+              >
+                <template #bodyCell="{ column, record }">
+                  <template v-if="column.key === 'ssocJobTitle'">
+                    <a
+                      :href="`https://www.mycareersfuture.gov.sg/search?search=${record.ssocJobTitle}&sortBy=relevancy`"
+                      target="_blank"
+                    >
+                      {{ record.ssocJobTitle }}
+                      <SearchOutlined style="margin-left: 0.5rem" />
+                    </a>
+                  </template>
+                </template>
+              </Table>
             </CollapsePanel>
           </Collapse>
         </div>
@@ -81,7 +112,12 @@
                       }"
                     >
                       <template #title>
-                        <a href="#">{{ item.degree }}</a>
+                        <a :href="getSearchUrl(item)" target="_blank"
+                          ><strong
+                            >{{ item.degree
+                            }}<SearchOutlined
+                              style="margin-left: 0.5rem" /></strong
+                        ></a>
                       </template>
                       <template #description>
                         <ResultEducationDescription :item="item" />
@@ -114,6 +150,8 @@ import {
   ListItem,
   ListItemMeta,
 } from "ant-design-vue";
+import { SearchOutlined } from "@ant-design/icons-vue";
+
 import LineChart from "@/components/library/LineChart/LineChart.vue";
 import SankeyDiagram from "@/components/library/SankeyDiagram/SankeyDiagram.vue";
 import ResultEducationDescription from "@/components/chat/Results/ResultEducationDescription.vue";
@@ -160,6 +198,9 @@ const ssocJobsColumns = [
     title: "Title",
     dataIndex: "ssocJobTitle",
     key: "ssocJobTitle",
+    slots: {
+      title: "customTitle",
+    },
   },
   {
     title: "ISCO Code",
@@ -199,6 +240,22 @@ const programs = computed(() => {
       return bParams?.grossMonthlyMedian - aParams?.grossMonthlyMedian;
     });
 });
+
+const cleanName = (name) => {
+  if (typeof name === "string") {
+    const cleanName = name.replaceAll(/[&/\\#,+()$~%.'":*?<>{} ]/g, "+");
+    return cleanName;
+  }
+  return "";
+};
+
+const getSearchUrl = (program) => {
+  if (program.degree) {
+    const cleanDegreeText = cleanName(program.degree);
+    const cleanUniversityeText = cleanName(program.university);
+    return `https://www.google.com/search?q=${cleanDegreeText}+${cleanUniversityeText}`;
+  }
+};
 </script>
 
 <style scoped>
