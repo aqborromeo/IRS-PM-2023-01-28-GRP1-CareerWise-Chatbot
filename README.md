@@ -1,6 +1,5 @@
 ﻿### IRS-PM-2023-01-28-GRP1-CareerWise-Chatbot
 
-Testing main branch protection
 ## PROJECT TITLE
 ## CareerWise Chatbot - Career Path Recommendation
 
@@ -16,7 +15,6 @@ Testing main branch protection
 | :------------ |:---------------:| :-----| :-----|
 | Borromeo, Angelie Quiapo | A0270177A | Project Manager and Documentation| angelieqborromeo@gmail.com |
 | Chua Jack Yune | A0269363U | Main Developer | jckynchua@yahoo.com |
-| Nilothpal Bhattacharya | E1113631 | Ideation | e1113631@u.nus.edu |
 | Kwatt Ivy | A0269639H | Secondary Developer| kwattivy@gmail.com|
 
 ---
@@ -121,7 +119,7 @@ part of education and career path selection.
 `Refer to UserGuide.pdf in project report at Github Folder: ProjectReport`
 
 This video intends to guide the user in installing and configuring CareerWise Chabot in local machine.
-[Intallation and User Guide](https://drive.google.com/file/d/13NQYipt-6jEE9UmYIh8rRoNrPyelWmnB/view?usp=share_link)
+[Installation and User Guide](https://drive.google.com/file/d/13NQYipt-6jEE9UmYIh8rRoNrPyelWmnB/view?usp=share_link)
 
 
 ### [ 1 ] To run the system in other/local machine:
@@ -156,8 +154,6 @@ This video intends to guide the user in installing and configuring CareerWise Ch
 > **Go to URL using web browser to access the frontend and register an account**  http://localhost:8080/ 
 
 ---
-
-### <<<<<<<<<<<<<<<<<<<< End of Template >>>>>>>>>>>>>>>>>>>>
 
 ---
 
