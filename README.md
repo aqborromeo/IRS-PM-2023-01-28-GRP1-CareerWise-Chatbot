@@ -112,6 +112,7 @@ part of education and career path selection.
 - Appendix C: Sample Test Scripts use to answer CareerWise Chatbot
 - Appendix D: Individual Project Report
 - Appendix E: User Guide
+- Appendix F: Project Proposal
 
 ---
 ## USER GUIDE
