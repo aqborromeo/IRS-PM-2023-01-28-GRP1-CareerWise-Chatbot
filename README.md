@@ -77,7 +77,7 @@ part of education and career path selection.
 ## SECTION 5 : SOLUTION AND SYSTEM ARCHITECTURE  (VIDEO OF SYSTEM & USE CASE DEMO)
 `Refer to project report at Github Folder: ProjectReport`
 
-[CareerWise_Chatbot_System_Design](https://drive.google.com/file/d/1d9SQSdmppO11if0RIS2ST-YUo0UrSKm2/view?usp=share_link)
+[CareerWise_Chatbot_System_Design](https://drive.google.com/file/d/1kiO1Pe0fBjxBLA0Jzimh2iA2OzNbUkAj/view?usp=share_link)
 [CareerWise_Chatbot_Marketing_Video](https://youtu.be/Btl_fdIJPC8)
 ---
 
@@ -110,17 +110,18 @@ part of education and career path selection.
 
 - Appendix A1: Interview with Subject Matter Expert
 - Appendix A2: Survey Results (Refer to Github Folder: Miscellaneous/CareerJouney_Survey_Result_21052023.xlsx)
-- Appendix B: Sample Test Scripts
-- Appendix C: Individual Project Report
-- Appendix D: User Guide
+- Appendix B: Map of the System Functionalities against Modules
+- Appendix C: Sample Test Scripts use to answer CareerWise Chatbot
+- Appendix D: Individual Project Report
+- Appendix E: User Guide
 
 ---
 ## USER GUIDE
 
-`Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport`
+`Refer to UserGuide.pdf in project report at Github Folder: ProjectReport`
 
 This video intends to guide the user in installing and configuring CareerWise Chabot in local machine.
-[Intallation and User Guide](https://drive.google.com/file/d/1QjMueGh3bZSc4L2dDPmJNDtVucLNg6eA/view?usp=share_link)
+[Intallation and User Guide](https://drive.google.com/file/d/13NQYipt-6jEE9UmYIh8rRoNrPyelWmnB/view?usp=share_link)
 
 
 ### [ 1 ] To run the system in other/local machine:
@@ -130,20 +131,6 @@ This video intends to guide the user in installing and configuring CareerWise Ch
 > Download Postgres Database and install [PostgreSQL_Download](https://www.postgresql.org/download/)
 
 > Clone the Github repository of CareerWise Chatbot.  $ git clone https://github.com/aqborromeo/IRS-PM-2023-01-28-GRP1-CareerWise-Chatbot.git
-
-> Configuring the front-end. $ cd IRS-PM/IRS-PM-2023-01-28-GRP1-CareerWise-Chatbot/SystemCode/src/frontend
-
-> $ cp .env.careerwise .env
-
-> $ source .env
-
-> For prodedure in installing NodeJS and NPM follow [Installation Procedure](https://learn.microsoft.com/en-us/microsoft-edge/visual-studio-code/microsoft-edge-devtools-extension/install) prior to running the below commands.
-
-> $ npm install
-
-> $ npm run serve
-
-> $ npm run build
 
 > Configuring the backend. $ cd IRS-PM/IRS-PM-2023-01-28-GRP1-CareerWise-Chatbot/SystemCode/src/backend
 
@@ -156,6 +143,8 @@ This video intends to guide the user in installing and configuring CareerWise Ch
 > $ pip install poetry
 
 > $ poetry install
+
+> $ pip install dotenv load_dotenv flask_restful flask_cors Levenshtein jwt flask_pydantic pandas sentence_transformers flask_seeder psycopg2 PyJWT
 
 > $ alembic upgrade head
 
