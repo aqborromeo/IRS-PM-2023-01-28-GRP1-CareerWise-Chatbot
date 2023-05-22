@@ -131,7 +131,7 @@ This video intends to guide the user in installing and configuring CareerWise Ch
 
 > Clone the Github repository of CareerWise Chatbot.  $ git clone https://github.com/aqborromeo/IRS-PM-2023-01-28-GRP1-CareerWise-Chatbot.git
 
-> Configuring the backend. $ cd IRS-PM/IRS-PM-2023-01-28-GRP1-CareerWise-Chatbot/SystemCode/src/backend
+> Configuring the backend. $ cd IRS-PM-2023-01-28-GRP1-CareerWise-Chatbot/SystemCode/src/backend
 
 > $ cp .env.careerwise .env
 
